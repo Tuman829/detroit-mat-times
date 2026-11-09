@@ -1,0 +1,14 @@
+# Corrections to the Website column of the Gym Websites tab, kept here so a
+# sheet pull can't undo them. A blank (~) hides the link and keeps the map.
+# Link audit: 2026-11-09.
+
+# Bare domain serves the wrong TLS certificate; www is fine.
+LightHouse Jiu-Jitsu Academy: https://www.lighthousejj.com/
+# formulajj.com is now a parked domain. This is the sister site, which still lists the address.
+Formula Jiu Jitsu Plymouth Canton: https://formulajiujitsu.art/
+# Domain does not resolve.
+Shojin Judo: ~
+# Every path returns 404.
+Champion Jiu Jitsu & MMA: ~
+# Live site, but browsers show a certificate warning.
+Brazilian Jiu Jitsu Club of Michigan: ~

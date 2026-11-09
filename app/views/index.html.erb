@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title><%= h config["title"] %>: Metro Detroit grappling schedule</title>
+<meta name="description" content="<%= timetable.classes.size %> jiu jitsu, wrestling and judo classes at <%= timetable.gyms.size %> Metro Detroit gyms. Filter by day, age and discipline, then print it.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%23c8102e' d='M0 0h8v16H0z'/%3E%3Cpath fill='%230a3fa8' d='M8 0h8v16H8z'/%3E%3C/svg%3E">
+<style><%= asset("application.css") %></style>
+</head>
+<body>
+<a class="skip" href="#schedule">Skip to the schedule</a>
+<div class="layout">
+  <aside class="sidebar">
+    <header class="brand">
+      <h1><%= h config["title"] %></h1>
+      <p><%= timetable.classes.size %> classes at <%= timetable.gyms.size %> gyms around Metro Detroit. Updated <%= pulled_on %>.</p>
+    </header>
+    <details id="filters" class="filters">
+      <summary>Filter and print</summary>
+      <form id="filter-form">
+        <label class="search"><span>Search</span>
+          <input type="search" name="q" placeholder="Gym, city or class" autocomplete="off">
+        </label>
+        <button type="button" class="text-button" data-today>Just today</button>
+        <%= render("filter_group", facet: "day", legend: "Day", choices: day_options, style: "days") %>
+        <%= render("filter_group", facet: "when", legend: "Time of day", choices: options("when"), style: "") %>
+        <%= render("filter_group", facet: "who", legend: "Who it's for", choices: options("who"), style: "") %>
+        <%= render("filter_group", facet: "discipline", legend: "Discipline", choices: options("discipline"), style: "") %>
+        <%= render("filter_group", facet: "attire", legend: "Attire", choices: options("attire"), style: "") %>
+        <%= render("filter_group", facet: "format", legend: "Format", choices: [["open", "Open mats only"]], style: "") %>
+        <%= render("long_filter", facet: "city", legend: "City", choices: city_options) %>
+        <%= render("long_filter", facet: "gym", legend: "Gym", choices: gym_options) %>
+        <fieldset class="group">
+          <legend>Layout</legend>
+          <label><input type="radio" name="view" value="list" checked> Day by day</label>
+          <label><input type="radio" name="view" value="week"> Week grid</label>
+        </fieldset>
+      </form>
+      <div class="group print-menu">
+        <h2>Print</h2>
+        <p>Uses the filters you've set.</p>
+        <button type="button" class="text-button" data-print-as="list">Day-by-day list</button>
+        <button type="button" class="text-button" data-print-as="week">Week grid, landscape</button>
+        <button type="button" class="text-button" data-print-as="gyms">Gym addresses</button>
+      </div>
+    </details>
+    <% if support? %>
+      <a class="support" href="<%= h config["support_url"] %>" target="_blank" rel="noopener"><%= h config["support_label"] %></a>
+    <% end %>
+  </aside>
+  <main>
+    <p class="print-only"><%= h config["title"] %>, Metro Detroit. Updated <%= pulled_on %>. Confirm times with the gym.</p>
+    <div class="toolbar">
+      <p id="result-count" aria-live="polite"><%= timetable.classes.size %> classes</p>
+      <button type="button" class="text-button" data-clear hidden>Clear filters</button>
+      <a class="jump" href="#gyms">All gyms, addresses and websites</a>
+    </div>
+    <p id="no-results" hidden>Nothing matches those filters. Try removing one.</p>
+    <div id="schedule" class="days" data-view="list">
+      <% timetable.by_day.each do |day, entries| %>
+        <section class="day" id="<%= day.downcase %>">
+          <h2><%= day %></h2>
+          <ol>
+            <% entries.each do |entry| %><%= render("entry", entry: entry) %><% end %>
+          </ol>
+        </section>
+      <% end %>
+    </div>
+    <section id="gyms" class="gyms">
+      <h2>Gyms</h2>
+      <p class="gyms-intro">Every gym in the sheet, including <%= directory.count { |gym| class_count(gym).zero? } %> that don't publish class times.</p>
+      <div class="gym-grid">
+        <% directory.each do |gym| %><%= render("gym", gym: gym) %><% end %>
+      </div>
+    </section>
+    <footer class="site-footer">
+      <p>Schedules change. Check with the gym before you drive over.</p>
+      <% unless config["repo_url"].to_s.empty? %>
+        <p><a href="<%= h config["repo_url"] %>/issues">Report a wrong time or a dead link</a></p>
+      <% end %>
+      <% if support? %>
+        <p><a href="<%= h config["support_url"] %>" target="_blank" rel="noopener"><%= h config["support_label"] %></a></p>
+      <% end %>
+    </footer>
+  </main>
+</div>
+<dialog id="gym-card" aria-label="Gym details">
+  <div data-gym-slot></div>
+  <div class="dialog-actions">
+    <button type="button" class="outline-button" data-only-gym value="">Show only this gym's classes</button>
+    <button type="button" class="text-button" data-close>Close</button>
+  </div>
+</dialog>
+<script type="module"><%= asset("application.js") %></script>
+</body>
+</html>

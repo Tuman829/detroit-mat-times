@@ -1,0 +1,12 @@
+<li class="entry" data-day="<%= entry.day_key %>" data-when="<%= entry.time_of_day %>" data-who="<%= entry.who.join(" ") %>" data-discipline="<%= entry.disciplines.join(" ") %>" data-attire="<%= entry.attire %>" data-format="<%= entry.format %>" data-city="<%= entry.gym.city_slug %>" data-gym="<%= entry.gym.slug %>">
+  <span class="time"><%= entry.time_label %></span>
+  <div class="entry-text">
+    <h3><%= h entry.title %></h3>
+    <p class="where"><a href="#gym-<%= entry.gym.slug %>" data-gym-link="<%= entry.gym.slug %>"><%= h entry.gym.name %></a>, <%= h entry.gym.city %></p>
+    <% unless details(entry).empty? %><p class="detail"><%= h details(entry).join(" · ") %></p><% end %>
+  </div>
+  <p class="links">
+    <% if entry.gym.website %><a href="<%= h entry.gym.website %>" target="_blank" rel="noopener">Site</a><% end %>
+    <a href="<%= h entry.gym.map_url %>" target="_blank" rel="noopener">Map</a>
+  </p>
+</li>

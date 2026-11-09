@@ -1,0 +1,11 @@
+<article class="gym" id="gym-<%= gym.slug %>">
+  <h3><%= h gym.name %></h3>
+  <p class="address"><%= h gym.address %></p>
+  <p class="gym-links">
+    <% if gym.website %><a href="<%= h gym.website %>" target="_blank" rel="noopener"><%= h hostname(gym.website) %></a><% end %>
+    <a href="<%= h gym.map_url %>" target="_blank" rel="noopener">Directions</a>
+  </p>
+  <% unless gym.youth.empty? %><p class="note">Youth: <%= h gym.youth %></p><% end %>
+  <% unless gym.notes.empty? %><p class="note"><%= h gym.notes %></p><% end %>
+  <p class="note"><%= class_count(gym).zero? ? "No class times listed" : "#{class_count(gym)} classes a week" %></p>
+</article>

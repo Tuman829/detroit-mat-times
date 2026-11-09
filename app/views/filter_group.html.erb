@@ -1,0 +1,6 @@
+<fieldset class="group <%= style %>">
+  <legend><%= legend %></legend>
+  <% choices.each do |value, label| %>
+    <label><input type="checkbox" name="<%= facet %>" value="<%= value %>"> <span><%= h label %></span></label>
+  <% end %>
+</fieldset>

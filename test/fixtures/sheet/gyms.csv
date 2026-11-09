@@ -1,0 +1,5 @@
+Gym,City,Street address,Website,Youth program (ages),Status / notes
+Test Gym,Troy,"1 Main St, Troy, MI 48084",https://testgym.example,Yes - Kids 6-12,"Verified live Oct 18, 2026"
+,,,,,
+Other Club of Michigan,Detroit,"Rec Center, 2 Oak St, Detroit, MI 48201 (club page); 3 Elm St (other page)",https://other.example/?a=1&b=2,No,
+Quiet Gym,Ann Arbor,"4 Pine St, Ann Arbor, MI 48104",https://quiet.example,Yes,No timetable published
