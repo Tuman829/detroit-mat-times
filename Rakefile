@@ -12,7 +12,7 @@ end
 namespace :test do
   desc "Run the JavaScript tests"
   task :js do
-    sh "node --test test/js/"
+    sh "node --test 'test/js/*.test.js'"
   end
 end
 
