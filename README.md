@@ -30,6 +30,10 @@ Run `rake sheet:pull`, then `rake`, and commit the changed CSVs. The tests check
 
 - New shorthand gym label: add it to `data/gym_aliases.yml`.
 - Wrong or dead gym website: correct it in `data/gym_overrides.yml`, which survives sheet pulls.
-- Support link and site title: `config/site.yml`.
+- Support link, site title and theme: `config/site.yml`.
+
+## Themes
+
+Each file in `app/assets/themes/` is a complete look. To switch, change `theme` in `config/site.yml` and rebuild. To add one, drop in a new CSS file. A file named `theme.scheme.css` is a color scheme layered over `theme.css`. `rake themes` builds them all into `_site/themes/` to compare locally. Fonts it references as `url("fonts/name.woff2")` must be in `app/assets/fonts/` and are copied at build time.
 
 Pushes to `main` are tested and deployed to GitHub Pages.

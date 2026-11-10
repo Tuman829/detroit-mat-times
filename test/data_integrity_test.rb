@@ -29,6 +29,36 @@ class DataIntegrityTest < Minitest::Test
     assert_equal removed.sort, DIRECTORY.reject(&:website).map(&:name).sort
   end
 
+  def test_every_gym_with_classes_has_a_map_pin
+    pins = MatTimes::GymLocator.load(MatTimes::SiteBuilder::COORDINATES)
+    unpinned = TIMETABLE.gyms.reject { |gym| pins.key?(gym.slug) }.map(&:name)
+
+    assert_empty unpinned, "Run rake gyms:locate"
+  end
+
+  def test_every_gym_with_classes_has_a_region
+    regions = MatTimes::Regions.load(MatTimes::SiteBuilder::REGIONS)
+
+    TIMETABLE.gyms.each { |gym| assert regions.for(gym.city), gym.name }
+  end
+
+  def test_border_gyms_are_real_gyms
+    names = TIMETABLE.gyms.map(&:name)
+
+    YAML.load_file(MatTimes::SiteBuilder::REGION_BORDERS).each_key { |name| assert_includes names, name }
+    MatTimes::Regions.load(MatTimes::SiteBuilder::REGIONS, borders: MatTimes::SiteBuilder::REGION_BORDERS)
+  end
+
+  def test_gyms_on_hold_are_real_and_written_up
+    held = YAML.load_file(File.join(MatTimes::ROOT, "data/unconfirmed_gyms.yml"))
+    write_up = File.read(File.join(MatTimes::ROOT, "docs/unconfirmed-gyms.md"))
+
+    held.each do |name|
+      assert DIRECTORY.fetch(name), name
+      assert_includes write_up, "## #{name}", "#{name} needs a section in docs/unconfirmed-gyms.md"
+    end
+  end
+
   def test_gym_slugs_are_unique
     slugs = DIRECTORY.map(&:slug)
 

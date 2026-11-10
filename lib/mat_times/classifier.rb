@@ -21,10 +21,13 @@ module MatTimes
       MIXED_GYMS.include?(gym_name) ? %w[other] : %w[bjj]
     end
 
-    def attire(title)
-      return "nogi" if title.match?(/\bno[\s-]?gi\b/i)
+    DEFAULT_ATTIRE = { %w[judo] => "gi", %w[wrestling] => "nogi" }.freeze
 
-      "gi" if title.match?(/\bgi\b/i)
+    def attire(title, disciplines:)
+      return "nogi" if title.match?(/\bno[\s-]?gi\b/i)
+      return "gi" if title.match?(/\bgi\b/i)
+
+      DEFAULT_ATTIRE[disciplines]
     end
   end
 end

@@ -6,7 +6,7 @@
 <title><%= h config["title"] %>: Metro Detroit grappling schedule</title>
 <meta name="description" content="<%= timetable.classes.size %> jiu jitsu, wrestling and judo classes at <%= timetable.gyms.size %> Metro Detroit gyms. Filter by day, age and discipline, then print it.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%23c8102e' d='M0 0h8v16H0z'/%3E%3Cpath fill='%230a3fa8' d='M8 0h8v16H8z'/%3E%3C/svg%3E">
-<style><%= asset("application.css") %></style>
+<style><%= stylesheet %></style>
 </head>
 <body>
 <a class="skip" href="#schedule">Skip to the schedule</a>
@@ -24,6 +24,7 @@
         </label>
         <button type="button" class="text-button" data-today>Just today</button>
         <%= render("filter_group", facet: "day", legend: "Day", choices: day_options, style: "days") %>
+        <%= render("filter_group", facet: "region", legend: "Region", choices: region_options, style: "") %>
         <%= render("filter_group", facet: "when", legend: "Time of day", choices: options("when"), style: "") %>
         <%= render("filter_group", facet: "who", legend: "Who it's for", choices: options("who"), style: "") %>
         <%= render("filter_group", facet: "discipline", legend: "Discipline", choices: options("discipline"), style: "") %>
@@ -31,10 +32,11 @@
         <%= render("filter_group", facet: "format", legend: "Format", choices: [["open", "Open mats only"]], style: "") %>
         <%= render("long_filter", facet: "city", legend: "City", choices: city_options) %>
         <%= render("long_filter", facet: "gym", legend: "Gym", choices: gym_options) %>
-        <fieldset class="group">
+        <fieldset class="group layout-choice">
           <legend>Layout</legend>
-          <label><input type="radio" name="view" value="list" checked> Day by day</label>
-          <label><input type="radio" name="view" value="week"> Week grid</label>
+          <label><input type="radio" name="view" value="week" checked> Week grid</label>
+          <label><input type="radio" name="view" value="list"> Day by day</label>
+          <label><input type="radio" name="view" value="map"> Map</label>
         </fieldset>
       </form>
       <div class="group print-menu">
@@ -52,24 +54,32 @@
   <main>
     <p class="print-only"><%= h config["title"] %>, Metro Detroit. Updated <%= pulled_on %>. Confirm times with the gym.</p>
     <div class="toolbar">
-      <p id="result-count" aria-live="polite"><%= timetable.classes.size %> classes</p>
+      <p id="result-count" class="visually-hidden" aria-live="polite"><%= timetable.classes.size %> classes</p>
       <button type="button" class="text-button" data-clear hidden>Clear filters</button>
+      <button type="button" class="text-button" data-map-toggle>Map</button>
       <a class="jump" href="#gyms">All gyms, addresses and websites</a>
     </div>
     <p id="no-results" hidden>Nothing matches those filters. Try removing one.</p>
-    <div id="schedule" class="days" data-view="list">
-      <% timetable.by_day.each do |day, entries| %>
-        <section class="day" id="<%= day.downcase %>">
-          <h2><%= day %></h2>
-          <ol>
-            <% entries.each do |entry| %><%= render("entry", entry: entry) %><% end %>
-          </ol>
+    <div id="schedule" class="days" data-view="week" style="--rows: <%= timetable.start_times.size + 1 %>; --cols: <%= timetable.by_day.size %>">
+      <ol class="hours">
+        <% timetable.start_times.each do |start_time| %>
+          <li class="hour" style="--row: <%= row_for(start_time) %>"><span><%= MatTimes::Clock.format(start_time) %></span></li>
+        <% end %>
+      </ol>
+      <% timetable.by_day.each_with_index do |(day, entries), index| %>
+        <section class="day" id="<%= day.downcase %>" style="--col: <%= index + 2 %>">
+          <h2><%= day %> <span class="day-count"><%= entries.size %></span></h2>
+          <% entries.group_by(&:starts_at).each do |start_time, slot| %>
+            <ol class="slot" style="--row: <%= row_for(start_time) %>">
+              <% slot.each do |entry| %><%= render("entry", entry: entry) %><% end %>
+            </ol>
+          <% end %>
         </section>
       <% end %>
     </div>
+    <div id="map" class="map" hidden></div>
     <section id="gyms" class="gyms">
       <h2>Gyms</h2>
-      <p class="gyms-intro">Every gym in the sheet, including <%= directory.count { |gym| class_count(gym).zero? } %> that don't publish class times.</p>
       <div class="gym-grid">
         <% directory.each do |gym| %><%= render("gym", gym: gym) %><% end %>
       </div>
@@ -92,6 +102,7 @@
     <button type="button" class="text-button" data-close>Close</button>
   </div>
 </dialog>
+<script type="application/json" id="gym-pins"><%= pins_json %></script>
 <script type="module"><%= asset("application.js") %></script>
 </body>
 </html>

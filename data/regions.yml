@@ -1,0 +1,60 @@
+# Region => the gym cities in it, in the order the filter lists them.
+# The build fails on a gym city that isn't listed here.
+Detroit:
+  - Detroit
+Downriver:
+  - Allen Park
+  - Brownstown Township
+  - Grosse Ile
+  - Lincoln Park
+  - Riverview
+  - Romulus
+  - Southgate
+Western Wayne:
+  - Belleville
+  - Canton
+  - Canton Township
+  - Dearborn
+  - Garden City
+  - Livonia
+  - Northville
+  - Plymouth
+  - Redford
+  - Westland
+Oakland County:
+  - Bloomfield Township
+  - Clawson
+  - Commerce Township
+  - Farmington Hills
+  - Ferndale
+  - Hazel Park
+  - Highland
+  - Holly
+  - Lake Orion
+  - Novi
+  - Rochester
+  - Rochester Hills
+  - South Lyon
+  - Southfield
+  - Troy
+  - West Bloomfield Township
+  - Wixom
+Macomb County:
+  - Chesterfield
+  - Clinton Township
+  - Macomb
+  - Macomb Township
+  - Shelby Township
+  - St. Clair Shores
+  - Sterling Heights
+  - Warren
+  - Washington Township
+Ann Arbor area:
+  - Ann Arbor
+  - Saline
+Livingston County:
+  - Brighton
+  - Howell
+Monroe County:
+  - Dundee
+  - Monroe

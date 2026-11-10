@@ -87,4 +87,9 @@ class GymTest < Minitest::Test
     assert_includes gym.map_url, "48201"
     refute_includes gym.map_url, "Elm"
   end
+
+  def test_directions_url_routes_to_the_encoded_address
+    assert_equal "https://www.google.com/maps/dir/?api=1&destination=1%20Main%20St%2C%20Troy%2C%20MI%2048084",
+      directory.fetch("Test Gym").directions_url
+  end
 end

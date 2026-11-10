@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import { test } from "node:test";
-import { emptyState, matches, parseQuery, toQuery, todayKey } from "../../app/assets/application.js";
+import { emptyState, matches, parseQuery, pinsFor, regionColors, toQuery, todayKey } from "../../app/assets/application.js";
 
 const entry = (facets, text = "") => ({ facets, text });
 
@@ -47,19 +47,24 @@ test("search requires every word, in any order", () => {
 });
 
 test("reads filters, search and view from the query string", () => {
-  const state = parseQuery("?day=mon,tue&who=kids&q=judo&view=week");
+  const state = parseQuery("?day=mon,tue&who=kids&q=judo&view=list");
 
   assert.deepEqual([...state.filters.day], ["mon", "tue"]);
   assert.deepEqual([...state.filters.who], ["kids"]);
   assert.equal(state.q, "judo");
-  assert.equal(state.view, "week");
+  assert.equal(state.view, "list");
+});
+
+test("the week grid is the default view", () => {
+  assert.equal(emptyState().view, "week");
+  assert.equal(parseQuery("").view, "week");
 });
 
 test("ignores unknown params and views", () => {
   const state = parseQuery("?nope=1&view=sideways");
 
   assert.equal(state.filters.nope, undefined);
-  assert.equal(state.view, "list");
+  assert.equal(state.view, "week");
 });
 
 test("writes only what is set, so a clean page has a clean URL", () => {
@@ -67,7 +72,7 @@ test("writes only what is set, so a clean page has a clean URL", () => {
 });
 
 test("a query string survives the round trip", () => {
-  const search = "?day=mon%2Ctue&who=kids&q=open+mat&view=week";
+  const search = "?day=mon%2Ctue&who=kids&q=open+mat&view=list";
 
   assert.equal(toQuery(parseQuery(search)), search);
 });
@@ -75,4 +80,26 @@ test("a query string survives the round trip", () => {
 test("todayKey follows the schedule's day keys", () => {
   assert.equal(todayKey(new Date(2026, 10, 9)), "mon");
   assert.equal(todayKey(new Date(2026, 10, 8)), "sun");
+});
+
+test("the map view survives a round trip through the URL", () => {
+  const state = emptyState();
+  state.view = "map";
+  assert.equal(toQuery(state), "?view=map");
+  assert.equal(parseQuery("?view=map").view, "map");
+});
+
+test("map pins only show gyms with a matching class, with their count", () => {
+  const pins = [{ slug: "a" }, { slug: "b" }, { slug: "c" }];
+  const visible = [{ facets: { gym: ["a"] } }, { facets: { gym: ["a"] } }, { facets: { gym: ["c"] } }];
+
+  assert.deepEqual(pinsFor(pins, visible), [{ slug: "a", classes: 2 }, { slug: "c", classes: 1 }]);
+});
+
+test("each region gets its own pin color, in the order regions are listed", () => {
+  const colors = regionColors(["detroit", "downriver", "oakland-county"]);
+
+  assert.equal(new Set(Object.values(colors)).size, 3);
+  assert.deepEqual(Object.keys(colors), ["detroit", "downriver", "oakland-county"]);
+  assert.deepEqual(regionColors(["detroit"]), { detroit: colors.detroit });
 });

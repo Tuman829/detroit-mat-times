@@ -1,0 +1,46 @@
+#schedule[data-view="map"] { display: none; }
+
+#schedule .entry[style*="--region"], .gym[style*="--region"] {
+  background:
+    linear-gradient(var(--region) 50%, var(--region-2) 50%) left / 4px 100% no-repeat,
+    linear-gradient(90deg, color-mix(in srgb, var(--region) 10%, var(--surface, var(--paper))) 50%, color-mix(in srgb, var(--region-2) 10%, var(--surface, var(--paper))) 50%);
+  box-shadow: var(--lift, 0 0 0 transparent);
+}
+.region-dot { display: inline-block; width: 10px; height: 10px; border-radius: 50%; background: var(--region); border: 1px solid #000; flex: none; align-self: center; }
+
+.map { height: max(420px, 72vh); margin-bottom: 24px; border-radius: var(--radius, 0); background: var(--paper-2, var(--paper)); }
+.map.leaflet-container { font: inherit; font-family: var(--sans, inherit); }
+/* Overlapping tiles by half a pixel hides the hairline gaps the filter makes visible. */
+.map .leaflet-tile-container img { width: 256.5px !important; height: 256.5px !important; }
+.map.dark .leaflet-tile { filter: invert(1) hue-rotate(180deg) brightness(.85) contrast(.9) saturate(.6); }
+.map .leaflet-popup-content-wrapper, .map .leaflet-popup-tip { background: var(--surface, var(--paper)); color: var(--ink); border-radius: var(--radius, 0); }
+.map .leaflet-popup-content { margin: 12px 14px; }
+.map .leaflet-popup-close-button { color: var(--muted); }
+.map .leaflet-tooltip { background: var(--surface, var(--paper)); color: var(--ink); border-color: var(--rule); box-shadow: none; }
+.map .leaflet-tooltip::before { display: none; }
+.map .leaflet-control-attribution { background: var(--paper); color: var(--muted); }
+.map .leaflet-control-attribution a { color: var(--muted); }
+
+.map .legend { display: grid; gap: 2px; padding: 8px 10px; background: var(--surface, var(--paper)); color: var(--ink); border-radius: var(--radius, 0); box-shadow: var(--lift, none); font-size: .85rem; }
+.map .legend strong { margin-bottom: 2px; }
+.map .legend button { display: flex; gap: 8px; align-items: center; padding: 3px 4px; border: 0; background: none; color: inherit; font: inherit; text-align: left; cursor: pointer; border-radius: var(--radius, 0); }
+.map .legend button:hover, .map .legend button.on { background: var(--paper-2, var(--paper)); }
+.map .legend button.on { font-weight: 700; }
+.map .legend button.off { opacity: .45; }
+@media (max-width: 40rem) {
+  .map .legend { grid-template-columns: 1fr 1fr; gap: 0 4px; padding: 6px; font-size: .72rem; }
+  .map .legend strong { grid-column: 1 / -1; }
+  .map .legend button { padding: 2px 3px; gap: 5px; }
+}
+.map .split-pin span { display: block; width: 100%; height: 100%; box-sizing: border-box; border-radius: 50%; border: 1.5px solid #000; }
+.map .legend .swatch { width: 12px; height: 12px; border-radius: 50%; border: 1.5px solid #000; flex: none; }
+
+.pin strong { font-size: 1rem; }
+.pin p { margin: 4px 0 0; color: var(--muted); }
+.map .pin a { color: var(--ink); }
+.pin-links { display: flex; gap: 12px; align-items: baseline; }
+.pin-links button { color: var(--ink); }
+
+@media print {
+  .map, [data-map-toggle] { display: none !important; }
+}

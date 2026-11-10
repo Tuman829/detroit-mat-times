@@ -9,6 +9,8 @@ module MatTimes
 
     def map_url = "https://www.google.com/maps/search/?api=1&query=#{ERB::Util.url_encode(location)}"
 
+    def directions_url = "https://www.google.com/maps/dir/?api=1&destination=#{ERB::Util.url_encode(location)}"
+
     def self.slugify(text) = text.downcase.delete("'’").gsub(/[^a-z0-9]+/, "-").gsub(/\A-|-\z/, "")
   end
 end

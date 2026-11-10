@@ -1,0 +1,29 @@
+:root {
+  color-scheme: dark;
+  --paper: #0b0e14;
+  --paper-2: #1b2029;
+  --surface: #1a202b;
+  --ink: #eef0f3;
+  --muted: #c3c9d1;
+  --radius: 4px;
+  --lift: inset 0 1px 0 rgb(255 255 255 / .06), 0 2px 6px rgb(0 0 0 / .55);
+  --rule: #3a404a;
+  --column-rule: #2a303a;
+  --plate: #000000;
+  --on-plate: #e4e7ec;
+  --plate-muted: #a3abb5;
+  --plate-rule: #3a404a;
+  --field: #1b2029;
+  --on-field: #e4e7ec;
+  --cobalt: #6f9bff;
+  --on-cobalt: #000000;
+  --today: #f4b522;
+  --on-today: #000000;
+}
+
+.day h2, .gyms > h2 { background: #232b38; border-radius: var(--radius) var(--radius) 0 0; }
+.entry, .gym { border: 0; border-radius: var(--radius); box-shadow: var(--lift); }
+.day .entry { margin-top: 6px; }
+dialog { border-color: var(--column-rule); }
+.links a { color: var(--muted); }
+.links a:hover { color: var(--cobalt); }

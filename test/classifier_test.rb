@@ -2,7 +2,7 @@ require "test_helper"
 
 class ClassifierTest < Minitest::Test
   def disciplines(title, gym: "Test Gym") = MatTimes::Classifier.disciplines(title, gym_name: gym)
-  def attire(title) = MatTimes::Classifier.attire(title)
+  def attire(title, disciplines: %w[bjj]) = MatTimes::Classifier.attire(title, disciplines:)
 
   def test_names_the_discipline_in_the_title
     assert_equal %w[judo], disciplines("Adult Beginner Judo")
@@ -52,6 +52,15 @@ class ClassifierTest < Minitest::Test
     assert_equal "gi", attire("Kids Gi Jiu Jitsu")
     assert_equal "gi", attire("GI Grappling")
     assert_nil attire("Fundamentals Class")
+  end
+
+  def test_judo_is_gi_and_wrestling_is_nogi_unless_the_title_says_otherwise
+    assert_equal "gi", attire("Adult Judo", disciplines: %w[judo])
+    assert_equal "nogi", attire("Youth Wrestling", disciplines: %w[wrestling])
+    assert_equal "nogi", attire("No-Gi Judo", disciplines: %w[judo])
+    assert_equal "gi", attire("Gi Wrestling", disciplines: %w[wrestling])
+    assert_nil attire("Judo & BJJ", disciplines: %w[bjj judo])
+    assert_nil attire("Fundamentals Class", disciplines: %w[bjj])
   end
 
   def test_gi_is_only_matched_as_a_word

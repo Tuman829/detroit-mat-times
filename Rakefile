@@ -21,10 +21,25 @@ task :build do
   MatTimes::SiteBuilder.from_project.write(to: File.join(MatTimes::ROOT, "_site"))
 end
 
+desc "Build every theme into _site/themes/ to compare them locally"
+task :themes do
+  MatTimes::SiteBuilder.themes.each do |theme|
+    MatTimes::SiteBuilder.from_project(theme: theme).write(to: File.join(MatTimes::ROOT, "_site/themes", theme))
+  end
+end
+
 namespace :sheet do
   desc "Refresh data/sheet from the Google Sheet"
   task :pull do
     MatTimes::SheetPull.new(to: File.join(MatTimes::ROOT, "data/sheet")).call
+  end
+end
+
+namespace :gyms do
+  desc "Look up map pins for gyms that don't have one yet"
+  task :locate do
+    builder = MatTimes::SiteBuilder.from_project
+    MatTimes::GymLocator.new(file: MatTimes::SiteBuilder::COORDINATES).call(builder.timetable.gyms)
   end
 end
 

@@ -1,4 +1,6 @@
 title: Mat Times
+# Any file in app/assets/themes: timetable, wayfind, wayfind.night or wayfind.signal.
+theme: wayfind.night
 # The support link stays hidden until this is set.
 support_url: ""
 support_label: Buy me a coffee

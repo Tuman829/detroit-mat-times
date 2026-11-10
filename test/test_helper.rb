@@ -6,9 +6,14 @@ require "mat_times"
 module FixtureData
   SHEET = File.expand_path("fixtures/sheet", __dir__)
   ALIASES = File.expand_path("fixtures/gym_aliases.yml", __dir__)
+  REGIONS = File.expand_path("fixtures/regions.yml", __dir__)
 
   def directory
     @directory ||= MatTimes::GymDirectory.load(File.join(SHEET, "gyms.csv"), ALIASES)
+  end
+
+  def regions
+    @regions ||= MatTimes::Regions.load(REGIONS)
   end
 
   def timetable

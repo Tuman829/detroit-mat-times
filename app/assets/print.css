@@ -1,0 +1,44 @@
+@page { margin: 12mm; }
+@page week { size: landscape; margin: 7mm; }
+
+@media print {
+  :root { --paper: #fff; --paper-3: #fff; --ink: #000; --muted: #333; --rule: #bbb; --red: #000; --link: #000; --amber: #000; --cobalt: #000; --on-cobalt: #000; --surface: #fff; --plate: #fff; --on-plate: #000; --today: #fff; --on-today: #000; }
+
+  .time, .day h2, .day[data-today] h2, .gyms > h2 { background: none; color: #000; padding-left: 0; }
+  .entry, .gym { border-width: 0 0 1px; background: none; }
+  .detail .open { background: none; padding: 0; }
+
+  .sidebar, .toolbar, .links, .site-footer, dialog, .jump { display: none !important; }
+  .layout { display: block; }
+  main { padding: 0; }
+  a { text-decoration: none; }
+  .print-only { display: block; margin-bottom: 6px; font-size: 9pt; }
+  body { font-size: 10pt; }
+
+  .day h2 { position: static; font-size: 15pt; padding-top: 4px; border-bottom-width: 2px; }
+  .day h2, .gym, .entry { break-inside: avoid; }
+  .day h2 { break-after: avoid; }
+  .entry { grid-template-columns: 8.5rem minmax(0, 1fr); padding: 3px 0; }
+  .entry h3 { font-size: 10pt; display: inline; }
+  .time { grid-column: auto; font-size: 9pt; }
+  .where, .detail { font-size: 9pt; }
+
+  html:not([data-print="gyms"]) .gyms { display: none; }
+  html[data-print="gyms"] #schedule { display: none !important; }
+  html[data-print="gyms"] .gyms { margin: 0; border: 0; }
+  html[data-print="gyms"] .gym-grid { grid-template-columns: 1fr 1fr; }
+
+  #schedule[data-view="week"] {
+    page: week;
+    grid-template-columns: 3.4rem repeat(var(--cols), minmax(0, 1fr));
+    overflow: visible;
+    font-size: 6.5pt;
+  }
+
+  #schedule[data-view="week"] .day h2 { font-size: 10pt; padding: 2px 4px; }
+  #schedule[data-view="week"] .hour span { width: 3.4rem; padding: 2px; font-size: 7pt; }
+  #schedule[data-view="week"] .slot { padding-left: 1px; }
+  #schedule[data-view="week"] .entry { padding: 2px 3px; }
+  #schedule[data-view="week"] .time.ranged, #schedule[data-view="week"] .where, #schedule[data-view="week"] .detail, #schedule[data-view="week"] .entry h3 { font-size: 6.5pt; line-height: 1.15; display: block; margin: 0; padding: 0; }
+  #schedule[data-view="week"] .detail { display: flex; }
+}

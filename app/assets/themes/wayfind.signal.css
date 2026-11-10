@@ -1,0 +1,23 @@
+:root {
+  --paper: #14307f;
+  --paper-2: #1a3a9c;
+  --surface: #14307f;
+  --ink: #eef2ff;
+  --muted: #e0e8ff;
+  --rule: #2f4ea3;
+  --column-rule: #5a78cc;
+  --plate: #0a0d13;
+  --on-plate: #eef2ff;
+  --plate-muted: #c7ccd3;
+  --plate-rule: #34383f;
+  --field: #1b2029;
+  --on-field: #eef2ff;
+  --cobalt: #0a0d13;
+  --on-cobalt: #ffffff;
+  --today: #f4b522;
+  --on-today: #0a0d13;
+  color-scheme: dark;
+}
+
+a:hover { color: var(--amber); }
+.links a { color: var(--muted); }

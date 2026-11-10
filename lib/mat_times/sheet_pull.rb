@@ -1,6 +1,4 @@
 module MatTimes
-  # Refreshes data/sheet from the published Google Sheet. All tabs are fetched
-  # and checked before anything is written, so a bad response can't half-update.
   class SheetPull
     class BadResponse < StandardError; end
 

@@ -9,6 +9,13 @@ class TimetableTest < Minitest::Test
     assert_equal 5, timetable.classes.size
   end
 
+  def test_leaves_out_gyms_on_hold
+    held = MatTimes::Timetable.load(FixtureData::SHEET, directory, hold: ["Test Gym"])
+
+    refute_includes held.gyms.map(&:name), "Test Gym"
+    assert_equal timetable.classes.count { |klass| klass.gym.name != "Test Gym" }, held.classes.size
+  end
+
   def test_orders_by_day_then_time
     assert_equal ["Kids Judo 8-12", "No Gi Wrestling", "Women's BJJ", "Open Mat", "Youth Wrestling 9-12"],
       timetable.classes.map(&:title)
@@ -45,6 +52,10 @@ class TimetableTest < Minitest::Test
   def test_open_mat_tab_sets_the_format
     assert_equal "open", find("Open Mat").format
     assert_equal "class", find("No Gi Wrestling").format
+  end
+
+  def test_lists_each_start_time_once_for_the_grid_rows
+    assert_equal [9 * 60, 17 * 60, 18 * 60 + 40], timetable.start_times
   end
 
   def test_buckets_time_of_day

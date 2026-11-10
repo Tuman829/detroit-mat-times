@@ -1,0 +1,3 @@
+# Gyms right on the line between two regions, so they show under both.
+# Gym name => the second region (the first comes from the gym's city in data/regions.yml).
+Mash Gym: Oakland County

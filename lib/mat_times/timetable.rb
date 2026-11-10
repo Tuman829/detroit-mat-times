@@ -6,21 +6,24 @@ module MatTimes
 
     attr_reader :classes
 
-    def self.load(sheet_dir, directory)
-      new(sheet_dir, directory)
+    def self.load(sheet_dir, directory, hold: [])
+      new(sheet_dir, directory, hold:)
     end
 
-    def initialize(sheet_dir, directory)
+    def initialize(sheet_dir, directory, hold: [])
       @sheet_dir = sheet_dir
       @directory = directory
       @kids = tagged("kids.csv")
       @women = tagged("women.csv")
       @open_mats = tagged("open_mats.csv")
       @classes = cells("classes.csv").map { |cell| build(*cell) }
+                                     .reject { |klass| hold.include?(klass.gym.name) }
                                      .sort_by.with_index { |klass, index| [DAYS.index(klass.day), klass.starts_at, index] }
     end
 
     def by_day = classes.group_by(&:day)
+
+    def start_times = classes.map(&:starts_at).uniq.sort
 
     def gyms = classes.map(&:gym).uniq.sort_by(&:name)
 
@@ -30,7 +33,6 @@ module MatTimes
 
     def tagged(tab) = cells(tab).to_set
 
-    # Every [day, grid time, line of text] in a tab.
     def cells(tab)
       header, *rows = CSV.read(File.join(@sheet_dir, tab))
 
@@ -54,8 +56,8 @@ module MatTimes
         gym: gym,
         season: line.season,
         note: line.note,
-        disciplines: Classifier.disciplines(line.title, gym_name: gym.name),
-        attire: Classifier.attire(line.title),
+        disciplines: disciplines = Classifier.disciplines(line.title, gym_name: gym.name),
+        attire: Classifier.attire(line.title, disciplines:),
         who: [audience(key)],
         format: @open_mats.include?(key) ? "open" : "class"
       )
