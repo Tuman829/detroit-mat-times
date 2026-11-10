@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title><%= h config["title"] %> Bingo</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%23c8102e' d='M0 0h8v16H0z'/%3E%3Cpath fill='%230a3fa8' d='M8 0h8v16H8z'/%3E%3C/svg%3E">
+<style><%= bingo_stylesheet %></style>
+</head>
+<body>
+<div class="layout">
+  <aside class="sidebar">
+    <header class="brand">
+      <h1>Mat Bingo</h1>
+      <p>Every square is a real class. Train it, mark it off.</p>
+    </header>
+    <details id="filters" class="filters">
+      <summary>Card size and filters</summary>
+      <form id="filter-form">
+        <fieldset class="group">
+          <legend>Card size</legend>
+          <label><input type="radio" name="size" value="5x5" checked> <span>5 by 5</span></label>
+          <label><input type="radio" name="size" value="6x8"> <span>6 by 8</span></label>
+          <label><input type="radio" name="size" value="12x24"> <span>12 by 24</span></label>
+        </fieldset>
+        <%= render("filters") %>
+      </form>
+    </details>
+  </aside>
+  <main>
+    <div class="toolbar">
+      <button type="button" class="text-button" data-deal>New card</button>
+      <button type="button" class="text-button" data-print>Print</button>
+      <a class="jump" href="../">Back to the schedule</a>
+    </div>
+    <h2 class="bingo-title"><%= h config["title"] %> Bingo</h2>
+    <p id="bingo-short" hidden></p>
+    <div class="bingo-scroll"><ol id="bingo-card" class="bingo"></ol></div>
+  </main>
+</div>
+<script type="application/json" id="bingo-squares"><%= bingo_squares_json %></script>
+<script type="module"><%= script("application.js", "bingo.js") %></script>
+</body>
+</html>

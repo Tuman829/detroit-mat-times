@@ -1,0 +1,46 @@
+.bingo-title { margin: 4px 0 12px; font-size: 1.6rem; }
+#bingo-short { margin: 0 0 12px; }
+.bingo { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(var(--cols, 5), minmax(0, 1fr)); gap: 5px; }
+.bingo li { box-sizing: border-box; aspect-ratio: 1; display: grid; align-content: center; gap: 3px; padding: 6px; overflow: hidden; text-align: center; overflow-wrap: break-word; hyphens: auto; line-height: 1.2; font-family: var(--sans, inherit); font-size: .85rem; background: var(--surface, var(--paper)); border-radius: var(--radius, 0); box-shadow: var(--lift, 0 0 0 1px var(--rule)); }
+.bingo strong { font-size: 1rem; }
+.bingo span { color: var(--muted); }
+.bingo .free { font-family: var(--mono, inherit); font-weight: 800; font-size: 1.8rem; text-transform: uppercase; background: var(--today, var(--surface)); color: var(--on-today, var(--ink)); }
+
+.bingo[data-size="5x5"] { max-width: 46rem; }
+.bingo[data-size="6x8"] { max-width: 52rem; }
+.bingo[data-size="6x8"] li { font-size: .74rem; }
+.bingo[data-size="6x8"] strong { font-size: .84rem; }
+.bingo[data-size="12x24"] { gap: 3px; }
+.bingo[data-size="12x24"] li { aspect-ratio: auto; min-height: 4.6rem; padding: 3px; gap: 1px; font-size: .6rem; }
+.bingo[data-size="12x24"] strong { font-size: .64rem; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden; }
+.bingo[data-size="12x24"] span { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.bingo-scroll { overflow-x: auto; }
+.bingo[data-size="12x24"] { min-width: 60rem; }
+
+@media (max-width: 40rem) {
+  .bingo { gap: 3px; }
+  .bingo li { aspect-ratio: auto; min-height: 6rem; padding: 4px 3px; gap: 2px; font-size: .62rem; }
+  .bingo strong { font-size: .7rem; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 3; overflow: hidden; }
+  .bingo span { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .bingo .free { font-size: .95rem; }
+}
+
+@media print {
+  @page { margin: 8mm; }
+  :root { --paper: #fff; --surface: #fff; --ink: #000; --muted: #333; }
+  body { background: #fff; color: #000; }
+  .sidebar, .toolbar, #bingo-short { display: none !important; }
+  .layout { display: block; }
+  .bingo-scroll { overflow: visible; }
+  .bingo[data-size="12x24"] { min-width: 0; }
+  main { padding: 0; }
+  .bingo-title { margin: 0 0 3mm; font-size: 16pt; }
+  .bingo[data-size] { gap: 0; border-top: 1px solid #000; border-left: 1px solid #000; }
+  .bingo li { border-right: 1px solid #000; border-bottom: 1px solid #000; border-radius: 0; box-shadow: none; background: none; color: #000; break-inside: avoid; }
+  .bingo span { color: #333; }
+  .bingo .free { background: none; color: #000; }
+  .bingo[data-size="6x8"] li { aspect-ratio: auto; height: 30mm; font-size: 8pt; }
+  .bingo[data-size="6x8"] strong { font-size: 9pt; }
+  .bingo[data-size="12x24"] li { min-height: 0; height: 10.3mm; font-size: 4.6pt; line-height: 1.1; }
+  .bingo[data-size="12x24"] strong { font-size: 5pt; }
+}

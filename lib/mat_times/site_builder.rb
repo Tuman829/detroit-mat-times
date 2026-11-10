@@ -53,17 +53,22 @@ module MatTimes
 
     attr_reader :timetable
 
-    def html = render("index").gsub(/^[ \t]+/, "").squeeze("\n")
+    def html = page("index")
+
+    def bingo_html = page("bingo")
 
     def write(to:)
-      FileUtils.mkdir_p(to)
+      FileUtils.mkdir_p(File.join(to, "bingo"))
       File.write(File.join(to, "index.html"), html)
+      File.write(File.join(to, "bingo/index.html"), bingo_html)
       copy_fonts(to)
     end
 
     private
 
     attr_reader :directory, :config
+
+    def page(name) = render(name).gsub(/^[ \t]+/, "").squeeze("\n")
 
     def render(name, **locals)
       scope = binding
@@ -78,6 +83,10 @@ module MatTimes
     def asset(name) = File.read(File.join(ASSETS, name))
 
     def stylesheet = @stylesheet ||= theme_css + asset("grid.css") + asset("map.css") + asset("print.css")
+
+    def bingo_stylesheet = theme_css.gsub('url("fonts/', 'url("../fonts/') + asset("bingo.css")
+
+    def script(*names) = names.map { |name| asset(name).gsub(/^import .*;\n/, "") }.join("\n")
 
     # "wayfind.night" is the wayfind theme with the night color scheme layered on top.
     def theme_css
@@ -104,13 +113,17 @@ module MatTimes
     def day_options = timetable.by_day.keys.map { |day| [day[0, 3].downcase, day[0, 3]] }
 
     def options(facet)
-      present = timetable.classes.flat_map { |entry| values_for(entry, facet) }.compact.uniq
+      present = timetable.classes.flat_map { |entry| facets(entry).fetch(facet) }.uniq
 
       LABELS.fetch(facet).select { |value, _| present.include?(value) }.to_a
     end
 
-    def values_for(entry, facet)
-      { "when" => [entry.time_of_day], "who" => entry.who, "discipline" => entry.disciplines, "attire" => [entry.attire] }.fetch(facet)
+    def facets(entry)
+      {
+        "day" => [entry.day_key], "when" => [entry.time_of_day], "who" => entry.who, "discipline" => entry.disciplines,
+        "attire" => [entry.attire].compact, "format" => [entry.format], "city" => [entry.gym.city_slug],
+        "region" => regions_of(entry.gym).map(&:slug), "gym" => [entry.gym.slug]
+      }
     end
 
     def regions_of(gym) = @regions.of(gym)
@@ -135,7 +148,18 @@ module MatTimes
       end
     end
 
-    def pins_json = JSON.generate(pins).gsub("</", "<\\/")
+    def pins_json = json(pins)
+
+    def bingo_squares_json
+      json(timetable.classes.map do |entry|
+        {
+          title: entry.title, gym: entry.gym.name, day: entry.day[0, 3], time: entry.time_label, facets: facets(entry),
+          text: [entry.title, entry.gym.name, entry.gym.city, *details(entry)].join(" ").downcase
+        }
+      end)
+    end
+
+    def json(data) = JSON.generate(data).gsub("</", "<\\/")
 
     def class_count(gym) = class_counts.fetch(gym.slug, 0)
 

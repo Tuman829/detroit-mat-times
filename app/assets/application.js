@@ -81,7 +81,7 @@ function loadLeaflet() {
   return leaflet;
 }
 
-function element(tag, props = {}, ...children) {
+export function element(tag, props = {}, ...children) {
   const el = Object.assign(document.createElement(tag), props);
   el.append(...children);
   return el;
@@ -338,4 +338,4 @@ function boot() {
   render();
 }
 
-if (typeof document !== "undefined") boot();
+if (typeof document !== "undefined" && document.querySelector("#schedule")) boot();

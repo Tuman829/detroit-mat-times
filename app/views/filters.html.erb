@@ -1,0 +1,13 @@
+        <label class="search"><span>Search</span>
+          <input type="search" name="q" placeholder="Gym, city or class" autocomplete="off">
+        </label>
+        <button type="button" class="text-button" data-today>Just today</button>
+        <%= render("filter_group", facet: "day", legend: "Day", choices: day_options, style: "days") %>
+        <%= render("filter_group", facet: "region", legend: "Region", choices: region_options, style: "") %>
+        <%= render("filter_group", facet: "when", legend: "Time of day", choices: options("when"), style: "") %>
+        <%= render("filter_group", facet: "who", legend: "Who it's for", choices: options("who"), style: "") %>
+        <%= render("filter_group", facet: "discipline", legend: "Discipline", choices: options("discipline"), style: "") %>
+        <%= render("filter_group", facet: "attire", legend: "Attire", choices: options("attire"), style: "") %>
+        <%= render("filter_group", facet: "format", legend: "Format", choices: [["open", "Open mats only"]], style: "") %>
+        <%= render("long_filter", facet: "city", legend: "City", choices: city_options) %>
+        <%= render("long_filter", facet: "gym", legend: "Gym", choices: gym_options) %>

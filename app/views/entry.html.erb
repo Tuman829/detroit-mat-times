@@ -1,4 +1,4 @@
-<li class="entry" data-day="<%= entry.day_key %>" data-when="<%= entry.time_of_day %>" data-who="<%= entry.who.join(" ") %>" data-discipline="<%= entry.disciplines.join(" ") %>" data-attire="<%= entry.attire %>" data-format="<%= entry.format %>" data-city="<%= entry.gym.city_slug %>" data-region="<%= region_slugs(entry.gym) %>" data-gym="<%= entry.gym.slug %>">
+<li class="entry"<% facets(entry).each do |facet, values| %> data-<%= facet %>="<%= values.join(" ") %>"<% end %>>
   <span class="time<%= " ranged" if entry.ends_at %>"><%= entry.time_label %></span>
   <div class="entry-text">
     <h3><%= h entry.title %></h3>
