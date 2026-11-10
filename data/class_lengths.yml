@@ -1,0 +1,1329 @@
+# How long each class runs, from the gyms' own schedules. The site doesn't use this yet.
+# minutes: ~ means the source gives start times only. from_sheet: the sheet itself gives the end time.
+# unchecked: the class was added after the last research pass. mismatch: what the source showed when it disagreed with the sheet.
+
+"10th Planet Jiu-Jitsu Livonia":
+  source: "https://10thplanetlivonia.com/wp-content/uploads/2026/09/Screenshot-2026-09-04-at-3.22.42-PM-scaled.png"
+  source_date: "2026-09 (schedule image on live /schedule/ page)"
+  checked: "2026-11-10"
+  classes:
+    - { day: Sun, start: "1:00 PM", title: "Open Mat", minutes: 120 }
+    - { day: Mon, start: "11:00 AM", title: "BJJ Fundamentals", minutes: 60 }
+    - { day: Mon, start: "12:00 PM", title: "Advanced BJJ", minutes: 60 }
+    - { day: Mon, start: "6:30 PM", title: "BJJ Fundamentals", minutes: 90 }
+    - { day: Tue, start: "6:30 AM", title: "BJJ Fundamentals", minutes: 60 }
+    - { day: Tue, start: "5:30 PM", title: "BJJ Fundamentals", minutes: 60 }
+    - { day: Tue, start: "6:30 PM", title: "Wrestling", minutes: 60 }
+    - { day: Tue, start: "7:30 PM", title: "Advanced BJJ", minutes: 60 }
+    - { day: Wed, start: "11:00 AM", title: "BJJ Fundamentals", minutes: 60 }
+    - { day: Wed, start: "12:00 PM", title: "Advanced BJJ", minutes: 60 }
+    - { day: Wed, start: "6:30 PM", title: "BJJ Fundamentals", minutes: 90 }
+    - { day: Thu, start: "6:30 AM", title: "BJJ Fundamentals", minutes: 60 }
+    - { day: Thu, start: "5:30 PM", title: "BJJ Fundamentals", minutes: 60 }
+    - { day: Thu, start: "6:30 PM", title: "Wrestling", minutes: 60 }
+    - { day: Thu, start: "7:30 PM", title: "Advanced BJJ", minutes: 60 }
+    - { day: Fri, start: "11:00 AM", title: "BJJ Fundamentals", minutes: 60 }
+    - { day: Fri, start: "5:30 PM", title: "Women's BJJ", minutes: 60 }
+    - { day: Fri, start: "6:30 PM", title: "BJJ Fundamentals", minutes: 90 }
+    - { day: Sat, start: "11:00 AM", title: "Advanced Wrestling", minutes: 90 }
+    - { day: Sat, start: "12:30 PM", title: "BJJ Fundamentals", minutes: 90 }
+
+"313 Brazilian Jiu Jitsu":
+  source: "https://readonly-api.momence.com/host-plugins/host/22781/host-schedule/sessions"
+  source_date: "live 2026-11-10 (Nov 11-17)"
+  checked: "2026-11-10"
+  note: "Momence schedule plugin embedded on 313bjj.com/schedule"
+  classes:
+    - { day: Sun, start: "11:00 AM", title: "Fundamentals 1", minutes: 60 }
+    - { day: Sun, start: "12:00 PM", title: "Open Mat", minutes: 90 }
+    - { day: Mon, start: "6:45 AM", title: "Fundamentals 1", minutes: 60 }
+    - { day: Mon, start: "11:30 AM", title: "Fundamentals 1", minutes: 90 }
+    - { day: Mon, start: "5:00 PM", title: "Kids Gi class", minutes: 60 }
+    - { day: Mon, start: "6:00 PM", title: "Advanced Gi", minutes: 90 }
+    - { day: Mon, start: "6:30 PM", title: "Intro Class", minutes: 30 }
+    - { day: Thu, start: "5:00 PM", title: "Kids No-Gi class", minutes: 60 }
+    - { day: Thu, start: "6:00 PM", title: "Fundamentals 2", minutes: 90 }
+    - { day: Thu, start: "6:30 PM", title: "Intro Class", minutes: 30 }
+    - { day: Thu, start: "7:30 PM", title: "No Gi", minutes: 90 }
+    - { day: Fri, start: "6:45 AM", title: "No Gi", minutes: 60 }
+    - { day: Fri, start: "11:30 AM", title: "Fundamentals 1", minutes: 90 }
+    - { day: Fri, start: "5:00 PM", title: "Kids Gi class", minutes: 60 }
+    - { day: Fri, start: "6:00 PM", title: "Advanced BJJ", minutes: 90 }
+    - { day: Fri, start: "6:30 PM", title: "Intro Class", minutes: 30 }
+    - { day: Fri, start: "7:30 PM", title: "Nogi Fundamentals 1", minutes: 60 }
+    - { day: Sat, start: "11:00 AM", title: "Fundamentals 1", minutes: 60 }
+    - { day: Sat, start: "11:00 AM", title: "Intro Class", minutes: 30 }
+    - { day: Sat, start: "12:00 PM", title: "Open Mat", minutes: 90 }
+
+"A2 Jiu-Jitsu":
+  source: "https://www.a2jiujitsu.com/_files/ugd/dbbf1d_0329e642a4c144069c2cce5c7594f943.pdf"
+  source_date: "2026-06"
+  checked: "2026-11-10"
+  note: "June 2026 Class Schedule PDF linked from a2jiujitsu.com/programs"
+  classes:
+    - { day: Tue, start: "6:30 AM", title: "Sport No-Gi BJJ", minutes: 60 }
+    - { day: Tue, start: "5:30 PM", title: "Kids BJJ 5-12", minutes: 45 }
+    - { day: Wed, start: "5:30 PM", title: "Kids BJJ 5-12", minutes: 45 }
+    - { day: Thu, start: "5:30 PM", title: "Kids BJJ 5-12", minutes: 45 }
+    - { day: Fri, start: "6:30 AM", title: "Sport No-Gi BJJ", minutes: 60 }
+    - { day: Sat, start: "10:00 AM", title: "Open Mat", minutes: 60 }
+    - { day: Sat, start: "12:00 PM", title: "Kids BJJ 5-12", minutes: 45 }
+
+"All Day MMA & Jiu Jitsu":
+  source: "https://allday-mma.com/#classes"
+  source_date: "live 2026-11-10"
+  checked: "2026-11-10"
+  note: "homepage weekly schedule (day tabs) with start-end times"
+  classes:
+    - { day: Sun, start: "10:00 AM", title: "Adult Gi BJJ", minutes: 120 }
+    - { day: Mon, start: "5:00 PM", title: "Youth Gi BJJ", minutes: 60 }
+    - { day: Mon, start: "6:00 PM", title: "Adult Gi BJJ", minutes: 90 }
+    - { day: Tue, start: "5:00 PM", title: "Youth No-Gi BJJ", minutes: 60 }
+    - { day: Tue, start: "6:00 PM", title: "Adult No-Gi BJJ", minutes: 90 }
+    - { day: Tue, start: "7:30 PM", title: "Adult MMA", minutes: 90 }
+    - { day: Wed, start: "5:00 PM", title: "Youth No-Gi BJJ", minutes: 60 }
+    - { day: Wed, start: "6:00 PM", title: "Adult No-Gi BJJ", minutes: 90 }
+    - { day: Thu, start: "5:00 PM", title: "Youth Gi BJJ", minutes: 60 }
+    - { day: Thu, start: "6:00 PM", title: "Adult No-Gi BJJ", minutes: 90 }
+    - { day: Fri, start: "6:30 PM", title: "Adult No-Gi BJJ", minutes: 90 }
+    - { day: Sat, start: "10:00 AM", title: "Open Mat", minutes: 120 }
+
+"Allegiance Jiu Jitsu":
+  source: "https://www.allegiancegym.com/"
+  source_date: "live 2026-11-10"
+  checked: "2026-11-10"
+  note: "homepage schedule gives durations (e.g. 6:00AM 90m); site says it updates weekly"
+  classes:
+    - { day: Sun, start: "12:00 PM", title: "Open Mat", minutes: 60 }
+    - { day: Mon, start: "6:00 AM", title: "No-Gi BJJ", minutes: 90 }
+    - { day: Mon, start: "11:00 AM", title: "BJJ", minutes: 90 }
+    - { day: Mon, start: "5:00 PM", title: "Kids BJJ", minutes: 60 }
+    - { day: Mon, start: "6:00 PM", title: "No-Gi BJJ", minutes: 90 }
+    - { day: Mon, start: "7:30 PM", title: "MMA", minutes: 60 }
+    - { day: Tue, start: "11:00 AM", title: "BJJ", minutes: 90 }
+    - { day: Tue, start: "5:00 PM", title: "Kids BJJ", minutes: 60 }
+    - { day: Tue, start: "7:00 PM", title: "Gi BJJ", minutes: 90 }
+    - { day: Wed, start: "6:00 AM", title: "No-Gi BJJ", minutes: 90 }
+    - { day: Wed, start: "11:00 AM", title: "BJJ", minutes: 90 }
+    - { day: Wed, start: "5:00 PM", title: "Kids BJJ", minutes: 60 }
+    - { day: Wed, start: "6:00 PM", title: "MMA", minutes: 60 }
+    - { day: Wed, start: "7:00 PM", title: "Gi BJJ", minutes: 90 }
+    - { day: Thu, start: "11:00 AM", title: "BJJ", minutes: 90 }
+    - { day: Thu, start: "5:00 PM", title: "Kids BJJ", minutes: 60 }
+    - { day: Thu, start: "7:00 PM", title: "Gi BJJ", minutes: 90 }
+    - { day: Fri, start: "6:00 AM", title: "No-Gi BJJ", minutes: 90 }
+    - { day: Fri, start: "11:00 AM", title: "BJJ", minutes: 90 }
+    - { day: Fri, start: "5:00 PM", title: "Kids BJJ", minutes: 60 }
+    - { day: Fri, start: "6:00 PM", title: "No-Gi BJJ", minutes: 90 }
+    - { day: Fri, start: "7:30 PM", title: "MMA", minutes: 60 }
+    - { day: Sat, start: "10:00 AM", title: "BJJ / Submission Grappling", minutes: 90 }
+
+"Ann Arbor BJJ":
+  source: "https://annarborbjj.com/schedule"
+  source_date: "live 2026-11-10"
+  checked: "2026-11-10"
+  note: "page lists start times; end times come from the hours posted in the page code and when the next class starts"
+  classes:
+    - { day: Sun, start: "6:30 PM", title: "Standing (Wrestling for BJJ) (Adults)", minutes: 60 }
+    - { day: Mon, start: "12:00 PM", title: "All Levels (Adults)", minutes: 60 }
+    - { day: Mon, start: "6:30 PM", title: "Foundations (Adults)", minutes: 60 }
+    - { day: Mon, start: "6:30 PM", title: "Advanced (Adults)", minutes: 60 }
+    - { day: Mon, start: "7:30 PM", title: "Open Mat (Members only)", minutes: 60 }
+    - { day: Tue, start: "6:00 AM", title: "All Levels (Adults)", minutes: 60 }
+    - { day: Tue, start: "12:00 PM", title: "All Levels (Adults)", minutes: 60 }
+    - { day: Tue, start: "5:45 PM", title: "Kids (Ages 8–12)", minutes: 45 }
+    - { day: Tue, start: "6:00 PM", title: "Little Kids (Ages 4–7)", minutes: 30 }
+    - { day: Tue, start: "6:30 PM", title: "Foundations (Adults)", minutes: 60 }
+    - { day: Tue, start: "6:30 PM", title: "Advanced (Adults)", minutes: 60 }
+    - { day: Tue, start: "7:30 PM", title: "Open Mat (Members only)", minutes: 60 }
+    - { day: Wed, start: "12:00 PM", title: "All Levels (Adults)", minutes: 60 }
+    - { day: Wed, start: "6:30 PM", title: "Foundations (Adults)", minutes: 60 }
+    - { day: Wed, start: "6:30 PM", title: "Advanced (Adults)", minutes: 60 }
+    - { day: Wed, start: "7:30 PM", title: "Open Mat (Members only)", minutes: 60 }
+    - { day: Thu, start: "6:00 AM", title: "All Levels (Adults)", minutes: 60 }
+    - { day: Thu, start: "12:00 PM", title: "All Levels (Adults)", minutes: 60 }
+    - { day: Thu, start: "5:45 PM", title: "Kids (Ages 8–12)", minutes: 45 }
+    - { day: Thu, start: "6:00 PM", title: "Little Kids (Ages 4–7)", minutes: 30 }
+    - { day: Thu, start: "6:30 PM", title: "Foundations (Adults)", minutes: 60 }
+    - { day: Thu, start: "6:30 PM", title: "Advanced (Adults)", minutes: 60 }
+    - { day: Thu, start: "7:30 PM", title: "Open Mat (Members only)", minutes: 60 }
+    - { day: Fri, start: "6:00 AM", title: "All Levels (Adults)", minutes: 60 }
+    - { day: Fri, start: "12:00 PM", title: "Leg Locks (Adults)", minutes: 60 }
+    - { day: Fri, start: "6:30 PM", title: "Leg Locks (Adults)", minutes: 60 }
+    - { day: Fri, start: "7:30 PM", title: "Open Mat (Members only)", minutes: 60 }
+    - { day: Sat, start: "10:00 AM", title: "Leg Locks (Adults)", minutes: 60 }
+
+"APEX Jiu-Jitsu":
+  source: "https://martialartstroy.com/assets/schedule-09012026.pdf"
+  source_date: "2026-09-11 (PDF 'effective September 11th, 2026')"
+  checked: "2026-11-10"
+  classes:
+    - { day: Sun, start: "10:00 AM", title: "Beginner No-Gi BJJ", minutes: 30 }
+    - { day: Sun, start: "10:30 AM", title: "No-Gi Sparring", minutes: 60 }
+    - { day: Mon, start: "6:30 AM", title: "Adult Gi BJJ", minutes: 60 }
+    - { day: Mon, start: "12:00 PM", title: "Adult Gi BJJ", minutes: 60 }
+    - { day: Mon, start: "4:30 PM", title: "Young Lions BJJ 7+", minutes: 40 }
+    - { day: Mon, start: "6:30 PM", title: "Adult Gi BJJ", minutes: 45 }
+    - { day: Mon, start: "7:15 PM", title: "Gi BJJ Sparring", minutes: 45 }
+    - { day: Tue, start: "6:30 AM", title: "Adult No-Gi BJJ", minutes: 60 }
+    - { day: Tue, start: "12:00 PM", title: "Adult No-Gi BJJ", minutes: 60 }
+    - { day: Tue, start: "4:30 PM", title: "Young Lions BJJ 7+", minutes: 40 }
+    - { day: Tue, start: "6:30 PM", title: "Adult No-Gi BJJ", minutes: 45 }
+    - { day: Tue, start: "7:15 PM", title: "No-Gi BJJ Sparring", minutes: 45 }
+    - { day: Wed, start: "6:30 AM", title: "Adult Gi BJJ", minutes: 60 }
+    - { day: Wed, start: "4:30 PM", title: "Young Lions BJJ 7+", minutes: 40 }
+    - { day: Wed, start: "6:30 PM", title: "Adult Gi BJJ", minutes: 45 }
+    - { day: Wed, start: "7:15 PM", title: "Gi BJJ Sparring", minutes: 45 }
+    - { day: Thu, start: "12:00 PM", title: "Adult Gi BJJ", minutes: 60 }
+    - { day: Thu, start: "4:30 PM", title: "Young Lions BJJ 7+", minutes: 40 }
+    - { day: Thu, start: "6:30 PM", title: "Adult No-Gi BJJ", minutes: 45 }
+    - { day: Thu, start: "7:15 PM", title: "No-Gi BJJ Sparring", minutes: 45 }
+    - { day: Fri, start: "6:30 AM", title: "Adult No-Gi BJJ", minutes: 60 }
+    - { day: Fri, start: "12:00 PM", title: "Adult No-Gi BJJ", minutes: 60 }
+    - { day: Fri, start: "5:45 PM", title: "Young Lions Elite No-Gi 7+", minutes: 45 }
+    - { day: Fri, start: "6:30 PM", title: "Adult Gi BJJ", minutes: 45 }
+    - { day: Fri, start: "7:15 PM", title: "Gi BJJ Sparring", minutes: 45 }
+    - { day: Sat, start: "9:30 AM", title: "Beginner Gi BJJ / Sparring", minutes: 60 }
+    - { day: Sat, start: "10:30 AM", title: "Tiny Tigers BJJ 4-6", minutes: 45 }
+    - { day: Sat, start: "11:15 AM", title: "Young Lions Elite Gi 7+", minutes: 45 }
+    - { day: Sat, start: "12:00 PM", title: "Young Lions Competition 7+", minutes: 45 }
+
+"Assembly Jiu-Jitsu":
+  source: "https://widgets.mindbodyonline.com/widgets/schedules/8b970476814/load_markup"
+  source_date: "live 2026-11-10 (Nov 10-23)"
+  checked: "2026-11-10"
+  note: "Mindbody (Healcode) widget embedded on assembly-detroit.com/schedule-1"
+  classes:
+    - { day: Sun, start: "12:00 PM", title: "No Gi Fundamentals", minutes: 60 }
+    - { day: Sun, start: "12:00 PM", title: "Judo (sensei Harun)", minutes: ~, unchecked: true }
+    - { day: Sun, start: "1:30 PM", title: "No Gi Positional Sparring", minutes: 60 }
+    - { day: Mon, start: "6:00 AM", title: "Open Mat", minutes: 60 }
+    - { day: Mon, start: "11:30 AM", title: "No Gi Fundamentals", minutes: 60 }
+    - { day: Mon, start: "5:00 PM", title: "Kid's BJJ (4 years - 7 years)", minutes: 60 }
+    - { day: Mon, start: "6:30 PM", title: "No Gi Fundamentals", minutes: 60 }
+    - { day: Tue, start: "6:00 AM", title: "No Gi Fundamentals", minutes: 60 }
+    - { day: Tue, start: "11:30 AM", title: "No Gi Fundamentals", minutes: 60 }
+    - { day: Tue, start: "5:00 PM", title: "Kid's BJJ (8 years to 13 years)", minutes: 60 }
+    - { day: Tue, start: "6:00 PM", title: "No Gi Teens Fundamentals (Teens)", minutes: 30 }
+    - { day: Tue, start: "6:30 PM", title: "No Gi Fundamentals", minutes: 60 }
+    - { day: Tue, start: "6:30 PM", title: "Judo (sensei Harun)", minutes: ~, unchecked: true }
+    - { day: Wed, start: "5:00 PM", title: "Kid's BJJ (4 years - 7 years)", minutes: 60 }
+    - { day: Wed, start: "6:30 PM", title: "No Gi Fundamentals", minutes: 60 }
+    - { day: Thu, start: "6:00 AM", title: "Open Mat", minutes: 60 }
+    - { day: Thu, start: "11:30 AM", title: "No Gi Fundamentals", minutes: 60 }
+    - { day: Thu, start: "5:00 PM", title: "Kid's BJJ (8 years to 13 years)", minutes: ~, mismatch: "no Thu kids class in Nov 12 or Nov 19 schedule" }
+    - { day: Thu, start: "6:30 PM", title: "No Gi Fundamentals", minutes: 60 }
+    - { day: Fri, start: "6:00 AM", title: "No Gi Fundamentals", minutes: 60 }
+    - { day: Fri, start: "11:30 AM", title: "No Gi Fundamentals", minutes: 60 }
+    - { day: Fri, start: "6:30 PM", title: "No Gi Fundamentals", minutes: 60 }
+    - { day: Sat, start: "10:00 AM", title: "Kid's BJJ (4 years - 7 years)", minutes: ~, mismatch: "Sat Kid's BJJ (4-7) is 11:00 AM-12:00 PM" }
+    - { day: Sat, start: "11:00 AM", title: "Kid's BJJ (8 years to 13 years)", minutes: 45 }
+    - { day: Sat, start: "12:30 PM", title: "No Gi Takedowns", minutes: 60 }
+
+"Assembly Jiu-Jitsu Macomb":
+  source: ~
+  checked: "2026-11-10"
+  note: "schedule page embeds a Mindbody widget that Mindbody reports as deactivated; no Wayback captures; no other gym-published times found"
+  classes:
+    - { day: Mon, start: "6:30 PM", title: "Adult No-Gi BJJ", minutes: ~ }
+    - { day: Tue, start: "6:00 AM", title: "Adult No-Gi BJJ", minutes: ~ }
+    - { day: Tue, start: "5:00 PM", title: "Kids Gi BJJ", minutes: ~ }
+    - { day: Tue, start: "6:30 PM", title: "Adult No-Gi BJJ", minutes: ~ }
+    - { day: Wed, start: "6:30 PM", title: "Adult No-Gi BJJ", minutes: ~ }
+    - { day: Thu, start: "6:00 AM", title: "Adult No-Gi BJJ", minutes: ~ }
+    - { day: Thu, start: "5:00 PM", title: "Kids Gi BJJ", minutes: ~ }
+    - { day: Thu, start: "6:30 PM", title: "Adult No-Gi BJJ", minutes: ~ }
+    - { day: Fri, start: "6:30 PM", title: "Adult No-Gi BJJ", minutes: ~ }
+    - { day: Sat, start: "9:30 AM", title: "Kids No-Gi BJJ", minutes: ~ }
+    - { day: Sat, start: "10:15 AM", title: "Women's No-Gi Fundamentals", minutes: ~ }
+    - { day: Sat, start: "11:00 AM", title: "Adult No-Gi BJJ", minutes: ~ }
+
+"Boombox / Cortex-CSG":
+  source: "sheet"
+  checked: "2026-11-10"
+  classes:
+    - { day: Tue, start: "7:30 PM", title: "Catch Wrestling", minutes: 90, from_sheet: true }
+    - { day: Wed, start: "6:00 PM", title: "Catch Wrestling", minutes: 90, from_sheet: true }
+
+"Brazilian Jiu Jitsu Club of Michigan":
+  source: "https://web.archive.org/web/20260713160008/https://bjjclubofmichigan.com/michigan-hq-class-schedule/"
+  source_date: "2026-07"
+  checked: "2026-11-10"
+  note: "live site has a broken SSL cert; Wayback copy of the gym's own schedule page"
+  classes:
+    - { day: Mon, start: "10:00 AM", title: "Adult BJJ", minutes: 120 }
+    - { day: Mon, start: "4:30 PM", title: "Kids BJJ", minutes: 60 }
+    - { day: Mon, start: "6:00 PM", title: "Adult BJJ", minutes: 120 }
+    - { day: Wed, start: "10:00 AM", title: "Adult BJJ", minutes: 120 }
+    - { day: Wed, start: "4:30 PM", title: "Kids BJJ", minutes: 60 }
+    - { day: Wed, start: "6:00 PM", title: "Adult BJJ", minutes: 120 }
+    - { day: Thu, start: "10:00 AM", title: "Adult BJJ", minutes: 120 }
+    - { day: Thu, start: "6:00 PM", title: "Adult BJJ", minutes: 120 }
+    - { day: Sat, start: "10:00 AM", title: "Open Mat", minutes: 120 }
+
+"Caique BJJ Novi / iMA Sports Novi":
+  source: "sheet"
+  checked: "2026-11-10"
+  classes:
+    - { day: Mon, start: "5:20 PM", title: "Young Champs 7-9", minutes: 60, from_sheet: true }
+    - { day: Mon, start: "6:15 PM", title: "Adult Gracie BJJ Fundamentals", minutes: 60, from_sheet: true }
+    - { day: Tue, start: "5:15 PM", title: "Little Champs 4-6", minutes: 30, from_sheet: true }
+    - { day: Tue, start: "5:50 PM", title: "Young Champs 7-9", minutes: 60, from_sheet: true }
+    - { day: Tue, start: "6:15 PM", title: "Youth BJJ 10-14", minutes: 60, from_sheet: true }
+    - { day: Tue, start: "8:00 PM", title: "Adult Gracie BJJ Fundamentals", minutes: 60, from_sheet: true }
+    - { day: Wed, start: "5:20 PM", title: "Young Champs 7-9", minutes: 60, from_sheet: true }
+    - { day: Wed, start: "6:15 PM", title: "Adult Gracie BJJ Fundamentals", minutes: 60, from_sheet: true }
+    - { day: Thu, start: "5:15 PM", title: "Little Champs 4-6", minutes: 30, from_sheet: true }
+    - { day: Thu, start: "5:50 PM", title: "Young Champs 7-9", minutes: 60, from_sheet: true }
+    - { day: Thu, start: "6:15 PM", title: "Youth BJJ 10-14", minutes: 60, from_sheet: true }
+    - { day: Thu, start: "8:00 PM", title: "Adult No-Gi BJJ", minutes: 60, from_sheet: true }
+    - { day: Sat, start: "9:30 AM", title: "Mat Munchkins 3.5-4", minutes: 30, from_sheet: true }
+    - { day: Sat, start: "10:05 AM", title: "Little Champs 4-6", minutes: 30, from_sheet: true }
+    - { day: Sat, start: "10:40 AM", title: "Young Champs 7-9", minutes: 60, from_sheet: true }
+    - { day: Sat, start: "1:00 PM", title: "Adult No-Gi BJJ", minutes: 60, from_sheet: true }
+
+"Champion Jiu Jitsu & MMA":
+  source: ~
+  checked: "2026-11-10"
+  note: "no gym website or online schedule found (only directory listings)"
+  classes:
+    - { day: Mon, start: "5:00 PM", title: "Kids Gi BJJ", minutes: ~ }
+    - { day: Mon, start: "6:00 PM", title: "Adult Gi BJJ", minutes: ~ }
+    - { day: Tue, start: "7:00 PM", title: "Adult No-Gi BJJ", minutes: ~ }
+    - { day: Wed, start: "5:00 PM", title: "Kids Gi BJJ", minutes: ~ }
+    - { day: Wed, start: "6:00 PM", title: "Adult Gi BJJ", minutes: ~ }
+    - { day: Thu, start: "7:00 PM", title: "Adult No-Gi BJJ", minutes: ~ }
+    - { day: Fri, start: "5:00 PM", title: "Kids Gi BJJ", minutes: ~ }
+    - { day: Fri, start: "6:00 PM", title: "Adult Gi BJJ", minutes: ~ }
+    - { day: Sat, start: "11:00 AM", title: "Open Mat", minutes: ~ }
+
+"Club PAW - Rochester Premier Academy of Wrestling":
+  source: "sheet"
+  checked: "2026-11-10"
+  classes:
+    - { day: Mon, start: "6:30 PM", title: "Youth Novice Wrestling, grades 2-6", minutes: 75, from_sheet: true }
+    - { day: Mon, start: "7:45 PM", title: "Youth Competition Wrestling, grades 2-8", minutes: 90, from_sheet: true }
+    - { day: Wed, start: "6:30 PM", title: "Youth Novice Wrestling, grades 2-6", minutes: 75, from_sheet: true }
+    - { day: Wed, start: "7:45 PM", title: "Youth Competition Wrestling, grades 2-8", minutes: 90, from_sheet: true }
+
+"Commonwealth Jiu Jitsu":
+  source: "https://www.cmmnwlth.org/schedule"
+  source_date: "live 2026-11-10"
+  checked: "2026-11-10"
+  note: "times read from per-day schedule images on the schedule page"
+  classes:
+    - { day: Mon, start: "6:00 AM", title: "Adult Gi BJJ", minutes: 90 }
+    - { day: Mon, start: "12:00 PM", title: "Adult Gi BJJ", minutes: 90 }
+    - { day: Mon, start: "5:00 PM", title: "Kids Gi BJJ", minutes: 60 }
+    - { day: Mon, start: "6:30 PM", title: "Adult Gi BJJ", minutes: 90 }
+    - { day: Tue, start: "6:00 AM", title: "Adult Gi BJJ", minutes: 90 }
+    - { day: Tue, start: "12:00 PM", title: "Adult Gi BJJ", minutes: 90 }
+    - { day: Tue, start: "5:00 PM", title: "Kids Gi BJJ", minutes: 60 }
+    - { day: Tue, start: "6:00 PM", title: "Adult Judo", minutes: 60 }
+    - { day: Tue, start: "6:30 PM", title: "Adult Gi BJJ", minutes: 90 }
+    - { day: Wed, start: "6:00 AM", title: "Adult No-Gi BJJ", minutes: 90 }
+    - { day: Wed, start: "12:00 PM", title: "Adult No-Gi BJJ", minutes: 90 }
+    - { day: Wed, start: "5:00 PM", title: "Kids No-Gi BJJ", minutes: 60 }
+    - { day: Wed, start: "6:30 PM", title: "Adult No-Gi BJJ", minutes: 90 }
+    - { day: Thu, start: "6:00 AM", title: "Adult No-Gi BJJ", minutes: 90 }
+    - { day: Thu, start: "12:00 PM", title: "Adult No-Gi BJJ", minutes: 90 }
+    - { day: Thu, start: "5:00 PM", title: "Kids No-Gi BJJ", minutes: 60 }
+    - { day: Thu, start: "6:30 PM", title: "BJJ Competition Training", minutes: 90 }
+    - { day: Fri, start: "6:00 AM", title: "BJJ Open Mat", minutes: 90 }
+    - { day: Fri, start: "12:00 PM", title: "BJJ Open Mat", minutes: 90 }
+    - { day: Fri, start: "5:00 PM", title: "Kids BJJ", minutes: 60 }
+    - { day: Fri, start: "6:30 PM", title: "Adult Gi BJJ", minutes: 90 }
+    - { day: Sat, start: "10:00 AM", title: "Kids No-Gi BJJ", minutes: 60 }
+    - { day: Sat, start: "10:00 AM", title: "Adult Judo", minutes: 60 }
+    - { day: Sat, start: "11:00 AM", title: "No-Gi Leg Locks", minutes: 60 }
+    - { day: Sat, start: "12:00 PM", title: "BJJ Competition", minutes: 90 }
+
+"CORE Jiu-Jitsu":
+  source: "https://corejiu-jitsu.com/services"
+  source_date: "live 2026-11-10"
+  checked: "2026-11-10"
+  classes:
+    - { day: Mon, start: "9:00 AM", title: "Adult Class", minutes: 90 }
+    - { day: Mon, start: "12:30 PM", title: "Broken Rollers", minutes: 90 }
+    - { day: Mon, start: "6:00 PM", title: "Kids", minutes: 60 }
+    - { day: Mon, start: "7:00 PM", title: "Adult Class", minutes: 60 }
+    - { day: Mon, start: "8:00 PM", title: "Adult Class (Advanced)", minutes: 60 }
+    - { day: Wed, start: "9:00 AM", title: "Adult Class", minutes: 90 }
+    - { day: Wed, start: "12:30 PM", title: "Broken Rollers", minutes: 90 }
+    - { day: Wed, start: "6:00 PM", title: "Kids", minutes: 60 }
+    - { day: Wed, start: "7:00 PM", title: "Adult Class", minutes: 60 }
+    - { day: Wed, start: "8:00 PM", title: "Adult Class (Advanced)", minutes: 60 }
+    - { day: Fri, start: "9:00 AM", title: "Adult Class", minutes: 90 }
+    - { day: Fri, start: "12:30 PM", title: "Broken Rollers", minutes: 90 }
+    - { day: Fri, start: "6:00 PM", title: "Kids", minutes: 60 }
+    - { day: Fri, start: "7:00 PM", title: "Adult Class", minutes: 60 }
+    - { day: Fri, start: "8:00 PM", title: "Adult Class (Advanced)", minutes: 60 }
+
+"Detroit Jiu-Jitsu Academy":
+  source: "https://detroitjiujitsu.com"
+  source_date: "live 2026-11-10"
+  checked: "2026-11-10"
+  classes:
+    - { day: Sun, start: "11:30 AM", title: "GI Grappling", minutes: 90 }
+    - { day: Sun, start: "1:00 PM", title: "Kickboxing", minutes: 60 }
+    - { day: Mon, start: "11:30 AM", title: "NO-GI Grappling", minutes: 90 }
+    - { day: Mon, start: "5:00 PM", title: "Muay Thai Kickboxing", minutes: 60 }
+    - { day: Mon, start: "5:15 PM", title: "Kids Grappling (Ages 6-14)", minutes: 75 }
+    - { day: Mon, start: "6:30 PM", title: "NO-GI Grappling", minutes: 120 }
+    - { day: Tue, start: "11:30 AM", title: "NO-GI Grappling", minutes: 90 }
+    - { day: Tue, start: "5:30 PM", title: "Boxing", minutes: 60 }
+    - { day: Tue, start: "5:30 PM", title: "Women's ONLY Private Session", minutes: 60 }
+    - { day: Tue, start: "6:30 PM", title: "NO-GI Grappling", minutes: 120 }
+    - { day: Wed, start: "11:30 AM", title: "NO-GI Grappling", minutes: 90 }
+    - { day: Wed, start: "5:00 PM", title: "Muay Thai Kickboxing", minutes: 60 }
+    - { day: Wed, start: "5:15 PM", title: "Kids Grappling (Ages 6-14)", minutes: 75 }
+    - { day: Wed, start: "6:30 PM", title: "GI Grappling", minutes: 120 }
+    - { day: Thu, start: "11:30 AM", title: "GI Grappling", minutes: 90 }
+    - { day: Thu, start: "5:30 PM", title: "Kickboxing", minutes: 60 }
+    - { day: Thu, start: "5:30 PM", title: "Women's ONLY Private Session", minutes: 60 }
+    - { day: Thu, start: "6:30 PM", title: "NO-GI Grappling", minutes: 120 }
+    - { day: Fri, start: "6:00 AM", title: "GI Grappling", minutes: 90 }
+    - { day: Fri, start: "6:30 PM", title: "NO-GI Grappling", minutes: 120 }
+    - { day: Sat, start: "12:30 PM", title: "Boxing", minutes: 60 }
+
+"Detroit Jiu-Jitsu Heights Campus":
+  source: "https://djjheights.com"
+  source_date: "live 2026-11-10"
+  checked: "2026-11-10"
+  classes:
+    - { day: Mon, start: "5:30 PM", title: "Kids Gi (Ages 6-12)", minutes: 60 }
+    - { day: Mon, start: "6:30 PM", title: "Adult No-Gi (Ages 13+)", minutes: 120 }
+    - { day: Tue, start: "4:15 PM", title: "Little Sharks Gi (Ages 4-5)", minutes: 45 }
+    - { day: Tue, start: "5:00 PM", title: "Little Sharks Gi (Ages 4-5)", minutes: 45 }
+    - { day: Tue, start: "6:30 PM", title: "Adult No-Gi (Ages 13+)", minutes: 120 }
+    - { day: Wed, start: "5:30 PM", title: "Kids No-Gi (Ages 6-12)", minutes: 60 }
+    - { day: Wed, start: "6:30 PM", title: "Adult No-Gi (Ages 13+)", minutes: 120 }
+    - { day: Thu, start: "4:15 PM", title: "Little Sharks Gi (Ages 4-5)", minutes: 45 }
+    - { day: Thu, start: "5:00 PM", title: "Little Sharks Gi (Ages 4-5)", minutes: 45 }
+    - { day: Thu, start: "6:30 PM", title: "Adult Gi (Ages 13+)", minutes: 120 }
+    - { day: Fri, start: "5:30 PM", title: "Kids Wrestling (Ages 6-12)", minutes: 60 }
+    - { day: Fri, start: "6:30 PM", title: "Adult No-Gi (Ages 13+)", minutes: 120 }
+
+"Downriver Jiu-Jitsu & Fitness":
+  source: "https://downriverbjj.com/written-schedule/"
+  source_date: "live 2026-11-10"
+  checked: "2026-11-10"
+  note: "evening/kids classes have end times; morning classes start-only; adult evening 6:30-7:30 instructional is followed by 7:30-8:45 practical training"
+  classes:
+    - { day: Mon, start: "5:30 AM", title: "Adult BJJ No-Gi Fundamentals", minutes: ~ }
+    - { day: Mon, start: "5:00 PM", title: "Intro to Jiu Jitsu", minutes: 30, mismatch: "source lists this slot as 4-6 y/o kids No Gi 5:00-5:30 PM" }
+    - { day: Mon, start: "5:30 PM", title: "Jiu Jitsu Fundamentals, No Gi", minutes: 60, mismatch: "source lists this slot as 7 & up kids No Gi 5:30-6:30 PM" }
+    - { day: Mon, start: "6:30 PM", title: "No-Gi Fundamentals", minutes: 60, mismatch: "source lists Mon 6:30-7:30 PM as Gi instructional (then 7:30-8:45 practical)" }
+    - { day: Tue, start: "6:30 PM", title: "Adult Gi: Foundations & Mastery", minutes: 60, mismatch: "source lists Tue 6:30-7:30 PM as No Gi instructional (then 7:30-8:45 practical)" }
+    - { day: Wed, start: "5:30 AM", title: "Adult Gi Fundamentals", minutes: ~ }
+    - { day: Wed, start: "5:00 PM", title: "Intro to Jiu Jitsu", minutes: 30, mismatch: "source lists this slot as 4-6 y/o kids 5:00-5:30 PM" }
+    - { day: Wed, start: "5:30 PM", title: "Jiu Jitsu Fundamentals", minutes: 60, mismatch: "source lists this slot as 7 & up kids 5:30-6:30 PM" }
+    - { day: Wed, start: "6:30 PM", title: "Gi Fundamentals (all ranks)", minutes: 60 }
+    - { day: Thu, start: "6:30 PM", title: "Adult No-Gi: Foundations & Mastery", minutes: 60 }
+    - { day: Fri, start: "5:30 AM", title: "Fundamentals Gi", minutes: ~ }
+    - { day: Fri, start: "5:30 PM", title: "Jiu Jitsu Fundamentals", minutes: 60, mismatch: "source lists this slot as 7 & up kids 5:30-6:30 PM" }
+    - { day: Fri, start: "6:30 PM", title: "Gi Fundamentals (all ranks)", minutes: 60 }
+    - { day: Sat, start: "9:30 AM", title: "Gi Fundamentals (all ranks)", minutes: ~ }
+
+"Dundee Wrestling Club":
+  source: "sheet"
+  checked: "2026-11-10"
+  classes:
+    - { day: Tue, start: "6:00 PM", title: "Club Youth Wrestling 4-6", minutes: 60, from_sheet: true }
+    - { day: Tue, start: "7:00 PM", title: "Club Youth Wrestling 7+", minutes: 60, from_sheet: true }
+    - { day: Thu, start: "6:00 PM", title: "Club Youth Wrestling 7+", minutes: 90, from_sheet: true }
+
+"Elite Jiu-Jitsu":
+  source: "https://elite-jiujitsu.com/schedule"
+  source_date: "live 2026-11-10"
+  checked: "2026-11-10"
+  classes:
+    - { day: Sun, start: "9:00 AM", title: "Open Mat", minutes: 120 }
+    - { day: Mon, start: "6:30 PM", title: "All Students", minutes: 120 }
+    - { day: Tue, start: "6:00 PM", title: "Women's ONLY", minutes: 60 }
+    - { day: Tue, start: "7:00 PM", title: "Advanced Gi", minutes: 90 }
+    - { day: Wed, start: "5:15 PM", title: "Kids Jiu-Jitsu", minutes: 45 }
+    - { day: Wed, start: "6:30 PM", title: "All Students", minutes: 120 }
+    - { day: Thu, start: "7:00 PM", title: "No Gi", minutes: 90 }
+    - { day: Fri, start: "5:15 PM", title: "Kids Jiu-Jitsu", minutes: 45 }
+    - { day: Fri, start: "6:30 PM", title: "All Students", minutes: 120 }
+    - { day: Sat, start: "10:00 AM", title: "Self-Defense Class", minutes: 60 }
+    - { day: Sat, start: "11:00 AM", title: "ELITE Control Tactics ECT® (LEO Training)", minutes: 60 }
+
+"Formula Jiu Jitsu Garden City (The Martial Yard)":
+  source: "https://formulajj.gymdesk.com/schedule"
+  source_date: "2026-02 (search-engine cached copy)"
+  checked: "2026-11-10"
+  note: "Gymdesk account now suspended (HTTP 410) and site widget empty; times from web-search index of the gym's Gymdesk page, week of Feb 2-7 2026; Wed 6:45 PM not found in that copy"
+  classes:
+    - { day: Sun, start: "11:00 AM", title: "Adult Gi Judo & Jiu Jitsu", minutes: 75 }
+    - { day: Mon, start: "6:45 PM", title: "Adult No-Gi Jiu Jitsu", minutes: 75 }
+    - { day: Wed, start: "4:45 PM", title: "Little Kids Jiu Jitsu (Ages 4+)", minutes: 60 }
+    - { day: Wed, start: "6:45 PM", title: "Adult No-Gi Jiu Jitsu", minutes: ~ }
+    - { day: Sat, start: "9:45 AM", title: "Kids Jiu Jitsu Ages 8+", minutes: 45 }
+    - { day: Sat, start: "10:45 AM", title: "Family Jiu Jitsu Ages 4+", minutes: 60 }
+    - { day: Sat, start: "11:30 AM", title: "Adult NoGi Jiu Jitsu", minutes: 90 }
+    - { day: Sat, start: "4:00 PM", title: "Family Jiu Jitsu (Parents and Kids Ages 3.5+)", minutes: 75 }
+
+"Formula Jiu Jitsu Plymouth Canton":
+  source: "https://gymdesk.com/widgets/schedule/render/gym/6zo43"
+  source_date: "live 2026-11-10 (week of 2026-11-08)"
+  checked: "2026-11-10"
+  note: "Gymdesk widget embedded on formulajj.com/schedule (gym id 6zo43); Plymouth entries"
+  classes:
+    - { day: Mon, start: "6:00 AM", title: "6AM Adult Gi Jiu Jitsu", minutes: 60 }
+    - { day: Mon, start: "6:45 PM", title: "Adult No-Gi Jiu Jitsu", minutes: 75 }
+    - { day: Tue, start: "4:45 PM", title: "Little Kids Jiu Jitsu (Ages 4+)", minutes: 60 }
+    - { day: Tue, start: "6:45 PM", title: "Adult Gi Jiu Jitsu", minutes: 75 }
+    - { day: Wed, start: "6:00 AM", title: "6am Adult No-Gi Jiu Jitsu", minutes: 60 }
+    - { day: Wed, start: "6:45 PM", title: "Adult Gi Jiu Jitsu", minutes: 75 }
+    - { day: Thu, start: "4:45 PM", title: "Little Kids Jiu Jitsu (Ages 4+)", minutes: 60 }
+    - { day: Thu, start: "6:45 PM", title: "Adult Gi Jiu Jitsu", minutes: 75 }
+    - { day: Fri, start: "6:00 AM", title: "6am Adult Gi Jiu Jitsu", minutes: 60 }
+    - { day: Sat, start: "9:45 AM", title: "Kids Gi Jiu Jitsu (Ages 7+)", minutes: 75 }
+
+"Freedom Academy":
+  source: "https://freedomfma.com/schedule/"
+  source_date: "live 2026-11-10"
+  checked: "2026-11-10"
+  note: "embedded public Google Calendar (freedomacademymi@gmail.com); recurring events current as of Nov 2026"
+  classes:
+    - { day: Sun, start: "11:00 AM", title: "No Gi Jiu Jitsu", minutes: 90 }
+    - { day: Mon, start: "5:45 AM", title: "Gi Jiu Jitsu", minutes: 60 }
+    - { day: Mon, start: "5:00 PM", title: "Kids Jiu Jitsu", minutes: 45 }
+    - { day: Mon, start: "6:00 PM", title: "Gi Jiu Jitsu", minutes: 105 }
+    - { day: Tue, start: "5:45 AM", title: "Gi Jiu Jitsu", minutes: 60 }
+    - { day: Tue, start: "7:00 AM", title: "No Gi Jiu Jitsu / Lab Class", minutes: 60 }
+    - { day: Tue, start: "5:00 PM", title: "Womens Only Gi Jiu Jitsu", minutes: 60 }
+    - { day: Tue, start: "6:00 PM", title: "Self Defense Jiu Jitsu (Gi)", minutes: 120 }
+    - { day: Wed, start: "11:00 AM", title: "Homeschool Jiu Jitsu", minutes: 60 }
+    - { day: Wed, start: "12:00 PM", title: "Gi Jiu Jitsu", minutes: 60 }
+    - { day: Wed, start: "5:00 PM", title: "Kids Jiu Jitsu", minutes: 45 }
+    - { day: Wed, start: "6:00 PM", title: "Gi Jiu Jitsu", minutes: 105 }
+    - { day: Thu, start: "5:45 AM", title: "No Gi Submission Wrestling", minutes: 60 }
+    - { day: Thu, start: "7:00 AM", title: "No Gi Jiu Jitsu / Lab Class", minutes: 60 }
+    - { day: Thu, start: "5:00 PM", title: "Womens Only Gi Jiu Jitsu", minutes: 60 }
+    - { day: Thu, start: "6:00 PM", title: "Self Defense Jiu Jitsu (Gi)", minutes: 120 }
+    - { day: Fri, start: "5:45 AM", title: "No Gi Submission Wrestling", minutes: 60 }
+    - { day: Fri, start: "12:00 PM", title: "Gi Jiu Jitsu", minutes: 60 }
+    - { day: Fri, start: "5:00 PM", title: "Kids class gi", minutes: 45, mismatch: "'Kids class gi' (5:00-6:00 PM) ended 2026-10-16; slot is now 'Kids Jiu Jitsu' Mon/Wed/Fri 5:00-5:45 PM" }
+    - { day: Fri, start: "6:00 PM", title: "Gi Beginner Jiu Jitsu / Q&A", minutes: 60 }
+    - { day: Sat, start: "8:45 AM", title: "50 and Over Jits", minutes: 60 }
+    - { day: Sat, start: "10:00 AM", title: "Kids No Gi / Wrestling", minutes: 45 }
+    - { day: Sat, start: "11:00 AM", title: "No Gi / Catch Wrestling", minutes: 60 }
+
+"Fresh Brazilian Jiu Jitsu":
+  source: "https://fresh-brazilian-jiujitsu.com/schedule"
+  source_date: "live 2026-11-10 (Gymdesk week of Nov 9-15)"
+  checked: "2026-11-10"
+  classes:
+    - { day: Mon, start: "6:00 PM", title: "Kid's Class", minutes: 45 }
+    - { day: Mon, start: "7:00 PM", title: "Adult's BJJ Intermediate", minutes: 120 }
+    - { day: Wed, start: "6:30 PM", title: "Adult's BJJ Intermediate Class", minutes: 90 }
+    - { day: Thu, start: "7:00 PM", title: "Adult's BJJ Advance GI, NOGI & MMA", minutes: 60 }
+    - { day: Fri, start: "11:00 AM", title: "Adult's Basic BJJ", minutes: 90 }
+    - { day: Sat, start: "10:00 AM", title: "Kid's Class", minutes: 45 }
+    - { day: Sat, start: "11:00 AM", title: "Adult's BJJ Fundamentals", minutes: 60 }
+    - { day: Sat, start: "12:00 PM", title: "Open Mat", minutes: 60 }
+
+"Gracie Barra Northville":
+  source: "https://graciebarra.com/northville-mi/wp-content/uploads/sites/179/2026/11/a_Std-Schedule.jpg"
+  source_date: "2026-11"
+  checked: "2026-11-10"
+  note: "schedule image gives start times only for kids classes (only adult classes show end times)"
+  classes:
+    - { day: Mon, start: "7:30 PM", title: "Adult BJJ 14+", minutes: 90, from_sheet: true }
+    - { day: Tue, start: "6:30 PM", title: "SR Champs BJJ 9-13", minutes: ~ }
+    - { day: Tue, start: "7:30 PM", title: "Adult BJJ 14+", minutes: 90, from_sheet: true }
+    - { day: Wed, start: "5:30 PM", title: "JR Champs 1 BJJ 3-5", minutes: ~ }
+    - { day: Wed, start: "6:30 PM", title: "JR Champs 2 BJJ 6-8", minutes: ~ }
+    - { day: Wed, start: "7:30 PM", title: "Adult BJJ 14+", minutes: 90, from_sheet: true }
+    - { day: Thu, start: "6:30 PM", title: "SR Champs BJJ 9-13", minutes: ~ }
+    - { day: Thu, start: "7:30 PM", title: "Adult No-Gi BJJ 14+", minutes: 90, from_sheet: true }
+    - { day: Sat, start: "9:00 AM", title: "JR Champs BJJ 3-8", minutes: ~ }
+    - { day: Sat, start: "10:00 AM", title: "SR Champs BJJ 9-13", minutes: ~ }
+    - { day: Sat, start: "11:00 AM", title: "Adult BJJ 14+", minutes: 60, from_sheet: true }
+
+"Gracie Barra Novi":
+  source: "https://graciebarradetroit.com/schedule/"
+  source_date: "live 2026-11-10"
+  checked: "2026-11-10"
+  note: "live grid is Mon-Fri only; our Tue/Thu/Sat classes match the older Wayback Mar 2026 schedule image (Kids 6-7, Women's 7-8, Lab 8-9, Sat Kids 10-11, Open Mat 11-12) but are not on the live page"
+  classes:
+    - { day: Mon, start: "7:00 PM", title: "BJJ Fundamentals", minutes: 60 }
+    - { day: Mon, start: "8:00 PM", title: "Advanced BJJ", minutes: 60 }
+    - { day: Tue, start: "6:00 PM", title: "Kids BJJ", minutes: ~, mismatch: "live schedule has Kids Jiu-Jitsu Mon/Wed/Fri 6-7 PM only; Tue 7 PM is Fundamentals" }
+    - { day: Tue, start: "7:00 PM", title: "Women's BJJ", minutes: ~, mismatch: "live: Women's Only Jiu-Jitsu Mon/Wed/Fri 7-8 PM; Tue 7-8 PM is Fundamentals Jiu-Jitsu" }
+    - { day: Tue, start: "8:00 PM", title: "BJJ Lab", minutes: ~, mismatch: "no Jiu-Jitsu Lab on live schedule; nothing Tue 8 PM" }
+    - { day: Wed, start: "7:00 PM", title: "BJJ Fundamentals", minutes: 60 }
+    - { day: Wed, start: "8:00 PM", title: "Advanced BJJ", minutes: 60 }
+    - { day: Thu, start: "6:00 PM", title: "Kids BJJ", minutes: ~, mismatch: "live schedule has Kids Jiu-Jitsu Mon/Wed/Fri 6-7 PM only; Thu 7 PM is Fundamentals" }
+    - { day: Thu, start: "7:00 PM", title: "Women's BJJ", minutes: ~, mismatch: "live: Women's Only Jiu-Jitsu Mon/Wed/Fri 7-8 PM; Thu 7-8 PM is Fundamentals Jiu-Jitsu" }
+    - { day: Thu, start: "8:00 PM", title: "BJJ Lab", minutes: ~, mismatch: "no Jiu-Jitsu Lab on live schedule; nothing Thu 8 PM" }
+    - { day: Sat, start: "10:00 AM", title: "Kids BJJ", minutes: ~, mismatch: "no Saturday classes on live schedule (footer hours still say Sat 10am-12pm)" }
+    - { day: Sat, start: "11:00 AM", title: "Open Mat", minutes: ~, mismatch: "no Saturday classes on live schedule (footer hours still say Sat 10am-12pm)" }
+
+"Greater Detroit Budojuku":
+  source: "https://greaterdetroitaikikai.com/classes"
+  source_date: "live 2026-11-10"
+  checked: "2026-11-10"
+  classes:
+    - { day: Tue, start: "6:00 PM", title: "Youth Judo 8-13", minutes: 45 }
+    - { day: Tue, start: "7:00 PM", title: "Adult Judo 14+", minutes: 60 }
+    - { day: Thu, start: "6:00 PM", title: "Youth Judo 8-13", minutes: 45 }
+    - { day: Thu, start: "7:00 PM", title: "Adult Judo 14+", minutes: 60 }
+    - { day: Sat, start: "9:00 AM", title: "Adult Judo 14+", minutes: 50 }
+
+"Grosse Ile Wrestling Club":
+  source: "sheet"
+  checked: "2026-11-10"
+  classes:
+    - { day: Mon, start: "6:30 PM", title: "Youth Wrestling K-5", minutes: 60, from_sheet: true }
+    - { day: Wed, start: "6:30 PM", title: "Youth Wrestling K-5", minutes: 60, from_sheet: true }
+
+"Ippon Martial Arts":
+  source: "https://web.archive.org/web/20260715163636/https://www.ipponmartialarts.com/schedule"
+  source_date: "2026-07 (Wayback, week of Jul 12-18)"
+  checked: "2026-11-10"
+  note: "Wayback copy matches our list; live Gymdesk schedule (Nov 2026) differs: no Grappling/Kata/Randori, Judo 7:30-8:30 PM Mon/Wed + Sat 11:30, Open Mat after Judo, kids class order changed"
+  classes:
+    - { day: Mon, start: "4:30 PM", title: "Little Bushidos (Age 5-7)", minutes: 50 }
+    - { day: Mon, start: "5:30 PM", title: "Kachi Warriors  (Age 8-12)", minutes: 50 }
+    - { day: Mon, start: "6:30 PM", title: "Young Samurai (Age 13-16)", minutes: 50 }
+    - { day: Mon, start: "7:30 PM", title: "Grappling (Age 16+)", minutes: 60 }
+    - { day: Mon, start: "8:30 PM", title: "Kata (Age 16+)", minutes: 30 }
+    - { day: Tue, start: "4:30 PM", title: "Kachi Warriors  (Age 8-12)", minutes: 50 }
+    - { day: Tue, start: "5:30 PM", title: "Little Bushidos (Age 5-7)", minutes: 50 }
+    - { day: Tue, start: "6:30 PM", title: "Kachi Warriors  (Age 8-12)", minutes: 50 }
+    - { day: Tue, start: "7:30 PM", title: "Judo (Age 16+)", minutes: 60 }
+    - { day: Tue, start: "8:30 PM", title: "Randori (Age 16+)", minutes: 30 }
+    - { day: Wed, start: "4:30 PM", title: "Little Bushidos (Age 5-7)", minutes: 50 }
+    - { day: Wed, start: "5:30 PM", title: "Kachi Warriors  (Age 8-12)", minutes: 50 }
+    - { day: Wed, start: "6:30 PM", title: "Young Samurai (Age 13-16)", minutes: 50 }
+    - { day: Wed, start: "7:30 PM", title: "Judo (Age 16+)", minutes: 60 }
+    - { day: Wed, start: "8:30 PM", title: "Kata (Age 16+)", minutes: 30 }
+    - { day: Thu, start: "5:30 PM", title: "Little Bushidos (Age 5-7)", minutes: 50 }
+    - { day: Thu, start: "6:30 PM", title: "Kachi Warriors  (Age 8-12)", minutes: 50 }
+    - { day: Thu, start: "7:30 PM", title: "Grappling (Age 16+)", minutes: 60 }
+    - { day: Thu, start: "8:30 PM", title: "Randori (Age 16+)", minutes: 30 }
+    - { day: Fri, start: "4:30 PM", title: "Little Bushidos (Age 5-7)", minutes: 50 }
+    - { day: Fri, start: "5:30 PM", title: "Kachi Warriors  (Age 8-12)", minutes: 50 }
+    - { day: Fri, start: "6:30 PM", title: "Young Samurai (Age 13-16)", minutes: 50 }
+    - { day: Fri, start: "7:30 PM", title: "Judo (Age 16+)", minutes: 60 }
+    - { day: Fri, start: "8:30 PM", title: "Randori (Age 16+)", minutes: 30 }
+
+"Japanese Martial Arts Center (JMAC)":
+  source: "https://www.japanesemartialartscenter.com/schedule"
+  source_date: "live 2026-11-10"
+  checked: "2026-11-10"
+  classes:
+    - { day: Mon, start: "5:30 PM", title: "Kids Judo 8-12", minutes: 60 }
+    - { day: Tue, start: "5:30 PM", title: "Adult Judo", minutes: 60 }
+    - { day: Wed, start: "5:00 PM", title: "Kids Judo 8-12", minutes: 60 }
+    - { day: Wed, start: "6:00 PM", title: "Adult Judo", minutes: 60 }
+    - { day: Thu, start: "12:00 PM", title: "Adult Judo", minutes: 60 }
+    - { day: Fri, start: "6:00 PM", title: "Adult Judo", minutes: 60 }
+    - { day: Sat, start: "10:00 AM", title: "Kids Judo 8-12", minutes: 60 }
+    - { day: Sat, start: "11:00 AM", title: "Combined Judo / Jujutsu", minutes: 60 }
+
+"Karigane Judo Club":
+  source: "https://www.kariganejudo.com/practice-times-location"
+  source_date: "live 2026-11-10"
+  checked: "2026-11-10"
+  classes:
+    - { day: Sat, start: "12:15 PM", title: "Beginner Judo", minutes: 60 }
+    - { day: Sat, start: "1:15 PM", title: "Intermediate Judo", minutes: 60 }
+
+"L'Anse Creuse Wrestling Club":
+  source: "sheet"
+  checked: "2026-11-10"
+  classes:
+    - { day: Mon, start: "6:15 PM", title: "Youth Novice Wrestling 4-14", minutes: 75, from_sheet: true }
+    - { day: Tue, start: "6:15 PM", title: "Youth Intermediate Wrestling 4-14", minutes: 75, from_sheet: true }
+    - { day: Tue, start: "7:00 PM", title: "Advanced / Middle School Wrestling", minutes: 105, from_sheet: true }
+    - { day: Wed, start: "6:15 PM", title: "Youth Novice Wrestling 4-14", minutes: 75, from_sheet: true }
+    - { day: Wed, start: "7:00 PM", title: "Advanced / Middle School Wrestling", minutes: 105, from_sheet: true }
+    - { day: Thu, start: "6:15 PM", title: "Youth Intermediate Wrestling 4-14", minutes: 75, from_sheet: true }
+    - { day: Thu, start: "7:00 PM", title: "Advanced / Middle School Wrestling", minutes: 105, from_sheet: true }
+
+"Lake Orion Youth Wrestling - Novice":
+  source: "sheet"
+  checked: "2026-11-10"
+  classes:
+    - { day: Tue, start: "5:45 PM", title: "Youth Novice Wrestling K-8", minutes: 75, from_sheet: true }
+    - { day: Thu, start: "5:45 PM", title: "Youth Novice Wrestling K-8", minutes: 75, from_sheet: true }
+
+"Level-Up Jiu-Jitsu":
+  source: "https://www.levelupjj.com/schedule"
+  source_date: "live 2026-11-10 (week of 2026-11-08)"
+  checked: "2026-11-10"
+  note: "Gymdesk schedule; sessions this week display a 'day is marked as closed' flag"
+  classes:
+    - { day: Tue, start: "7:00 PM", title: "No-Gi Adult BJJ", minutes: 75 }
+    - { day: Thu, start: "7:00 PM", title: "No-Gi Adult BJJ", minutes: 75 }
+    - { day: Sat, start: "10:00 AM", title: "No-Gi - Adult BJJ", minutes: 75 }
+
+"LightHouse Jiu-Jitsu Academy":
+  source: "https://lighthouse-jiu-jitsu.gymdesk.com/schedule"
+  source_date: "week of 2026-11-08"
+  checked: "2026-11-10"
+  note: "Gymdesk schedule"
+  classes:
+    - { day: Sun, start: "11:30 AM", title: "Judo", minutes: 60 }
+    - { day: Mon, start: "5:00 PM", title: "Competition Class", minutes: 30 }
+    - { day: Mon, start: "5:30 PM", title: "Kids Class Gi", minutes: 60 }
+    - { day: Mon, start: "6:30 PM", title: "Adults GI", minutes: 60 }
+    - { day: Tue, start: "5:00 PM", title: "Competition Class", minutes: 30 }
+    - { day: Tue, start: "5:30 PM", title: "Kids NO-GI", minutes: 60 }
+    - { day: Tue, start: "6:30 PM", title: "Adult NO-GI", minutes: 60 }
+    - { day: Wed, start: "5:00 PM", title: "Competition Class", minutes: 30 }
+    - { day: Wed, start: "5:30 PM", title: "Kids Class Gi", minutes: 60 }
+    - { day: Wed, start: "6:30 PM", title: "Adults GI", minutes: 60 }
+    - { day: Fri, start: "5:00 PM", title: "Competition Class", minutes: 30 }
+    - { day: Fri, start: "5:30 PM", title: "Kids Class Gi", minutes: 60 }
+    - { day: Fri, start: "6:30 PM", title: "Adult NO-GI", minutes: 60 }
+
+"Mash Gym":
+  source: "https://calendar.google.com/calendar/ical/mash.gym.ma%40gmail.com/public/basic.ics"
+  source_date: "live 2026-11-10"
+  checked: "2026-11-10"
+  note: "Google Calendar embedded on mashgym.com/Schedule.html; durations from recurring event start/end"
+  classes:
+    - { day: Mon, start: "5:30 PM", title: "White Belt Fundamentals", minutes: 30 }
+    - { day: Mon, start: "6:00 PM", title: "Brazilian Jiu-Jitsu", minutes: 60 }
+    - { day: Mon, start: "7:00 PM", title: "Boxing & MMA", minutes: 60 }
+    - { day: Tue, start: "12:00 PM", title: "No-Gi Jiu-Jitsu", minutes: 60 }
+    - { day: Tue, start: "5:00 PM", title: "Kids/Teens BJJ (Ages 5-12)", minutes: 60 }
+    - { day: Tue, start: "5:30 PM", title: "White Belt Fundamentals", minutes: 30 }
+    - { day: Tue, start: "6:00 PM", title: "Brazilian Jiu-Jitsu", minutes: 60 }
+    - { day: Tue, start: "7:00 PM", title: "No-Gi Jiu-Jitsu", minutes: 90 }
+    - { day: Wed, start: "5:30 PM", title: "White Belt Fundamentals", minutes: 30 }
+    - { day: Wed, start: "6:00 PM", title: "Brazilian Jiu-Jitsu", minutes: 60 }
+    - { day: Thu, start: "7:00 AM", title: "Brazilian Jiu-Jitsu", minutes: 60 }
+    - { day: Thu, start: "12:00 PM", title: "No-Gi Jiu-Jitsu", minutes: 60 }
+    - { day: Thu, start: "5:00 PM", title: "Kids/Teens BJJ (Ages 5-12)", minutes: 60 }
+    - { day: Thu, start: "5:30 PM", title: "White Belt Fundamentals", minutes: 30 }
+    - { day: Thu, start: "7:00 PM", title: "MMA", minutes: 60 }
+    - { day: Fri, start: "12:00 PM", title: "No-Gi Jiu-Jitsu", minutes: 60 }
+    - { day: Fri, start: "5:30 PM", title: "White Belt Fundamentals", minutes: 30 }
+    - { day: Fri, start: "6:00 PM", title: "Open Mats", minutes: 60 }
+    - { day: Sat, start: "10:00 AM", title: "Kids BJJ (Ages 5-12)", minutes: 60 }
+    - { day: Sat, start: "10:30 AM", title: "White Belt Fundamentals", minutes: 30 }
+    - { day: Sat, start: "11:00 AM", title: "Brazilian Jiu-Jitsu", minutes: 60 }
+
+"MEGA / Judo Club Novi":
+  source: "https://www.mega-gym.com/programs/martial-arts"
+  source_date: "live 2026-11-10"
+  checked: "2026-11-10"
+  classes:
+    - { day: Wed, start: "6:15 PM", title: "Youth Judo", minutes: 60, mismatch: "source says Wednesday 7:30-8:30pm (Judo Youth)" }
+
+"Metro Detroit Brazilian Jiu-Jitsu - Rochester":
+  source: "https://metrodetroitbjj.com/schedule"
+  source_date: "live 2026-11-10"
+  checked: "2026-11-10"
+  note: "MDBJJ West / Rochester section lists start-end ranges"
+  classes:
+    - { day: Tue, start: "7:30 PM", title: "BJJ All Levels", minutes: 90 }
+    - { day: Wed, start: "7:30 PM", title: "BJJ All Levels", minutes: 90 }
+    - { day: Thu, start: "7:30 PM", title: "BJJ All Levels", minutes: 60 }
+    - { day: Thu, start: "7:45 PM", title: "Kids BJJ", minutes: 45 }
+    - { day: Fri, start: "6:00 PM", title: "Open Mat (members only)", minutes: 60 }
+    - { day: Sat, start: "11:30 AM", title: "BJJ Gi/NoGi", minutes: 60 }
+    - { day: Sat, start: "12:00 PM", title: "Kids BJJ", minutes: ~, mismatch: "no Sat kids class on current Rochester schedule (kids BJJ Tue/Fri 5:00-5:45 PM, Thu 7:45-8:30 PM)" }
+
+"Metro Detroit Brazilian Jiu-Jitsu - Shelby Twp":
+  source: "https://metrodetroitbjj.com/schedule"
+  source_date: "live 2026-11-10"
+  checked: "2026-11-10"
+  note: "source also lists Kids BJJ Mon 5:30-6:15 PM, which is not in our list"
+  classes:
+    - { day: Sun, start: "11:00 AM", title: "Open Mat (members only)", minutes: 120 }
+    - { day: Mon, start: "6:30 PM", title: "BJJ All Levels", minutes: 60 }
+    - { day: Tue, start: "6:00 AM", title: "Open Mat (members only)", minutes: 60 }
+    - { day: Tue, start: "11:30 AM", title: "BJJ All Levels", minutes: 60 }
+    - { day: Tue, start: "5:30 PM", title: "Kids BJJ", minutes: ~, mismatch: "source has no Tuesday kids class; Kids BJJ is Mon/Wed/Thu 5:30-6:15 PM" }
+    - { day: Tue, start: "6:30 PM", title: "BJJ All Levels", minutes: 60 }
+    - { day: Wed, start: "11:30 AM", title: "Open Mat (members only)", minutes: 60 }
+    - { day: Wed, start: "5:30 PM", title: "Kids BJJ", minutes: 45 }
+    - { day: Wed, start: "6:30 PM", title: "BJJ All Levels", minutes: 60 }
+    - { day: Thu, start: "6:00 AM", title: "Open Mat (members only)", minutes: 60 }
+    - { day: Thu, start: "11:30 AM", title: "BJJ All Levels", minutes: 60 }
+    - { day: Thu, start: "5:30 PM", title: "Kids BJJ", minutes: 45 }
+    - { day: Thu, start: "6:30 PM", title: "BJJ Gi/NoGi", minutes: 60 }
+    - { day: Fri, start: "6:30 PM", title: "Open Mat (members only)", minutes: 90 }
+    - { day: Sat, start: "10:30 AM", title: "BJJ Gi/NoGi", minutes: 60 }
+
+"Metro Jiu-Jitsu":
+  source: "https://metrojj.com/schedule"
+  source_date: "live 2026-11-10"
+  checked: "2026-11-10"
+  note: "schedule is an image grid with start times only"
+  classes:
+    - { day: Mon, start: "5:00 PM", title: "Little Lions Gi BJJ (image ages 4-7)", minutes: ~ }
+    - { day: Mon, start: "6:00 PM", title: "Lions / Youth Gi BJJ", minutes: ~ }
+    - { day: Mon, start: "7:00 PM", title: "Adult Gi BJJ", minutes: ~ }
+    - { day: Tue, start: "1:00 PM", title: "Adult Gi BJJ", minutes: ~ }
+    - { day: Tue, start: "6:00 PM", title: "Lions / Youth No-Gi BJJ", minutes: ~ }
+    - { day: Tue, start: "7:00 PM", title: "Adult No-Gi BJJ", minutes: ~ }
+    - { day: Wed, start: "5:00 PM", title: "Little Lions Gi BJJ (image ages 4-7)", minutes: ~ }
+    - { day: Wed, start: "6:00 PM", title: "Lions / Youth Gi BJJ", minutes: ~ }
+    - { day: Wed, start: "7:00 PM", title: "Adult Gi BJJ", minutes: ~ }
+    - { day: Thu, start: "6:00 PM", title: "Kids Wrestling", minutes: ~ }
+    - { day: Thu, start: "7:00 PM", title: "Adult Wrestling", minutes: ~ }
+    - { day: Fri, start: "1:00 PM", title: "Adult No-Gi BJJ", minutes: ~ }
+    - { day: Fri, start: "5:30 PM", title: "Lions / Youth Gi BJJ", minutes: ~ }
+    - { day: Fri, start: "6:30 PM", title: "Advanced Adult No-Gi BJJ", minutes: ~ }
+    - { day: Fri, start: "7:30 PM", title: "Fundamentals No-Gi BJJ", minutes: ~ }
+    - { day: Fri, start: "7:30 PM", title: "Open Mat", minutes: ~ }
+    - { day: Sat, start: "8:00 AM", title: "Adult BJJ Competition", minutes: ~ }
+
+"MI-REV Titan Revolution - Cleary":
+  source: "sheet"
+  checked: "2026-11-10"
+  classes:
+    - { day: Fri, start: "5:00 PM", title: "Youth/HS Wrestling drop-in at Cleary, Howell", minutes: 120, from_sheet: true }
+
+"Michigan Grappling Co.":
+  source: "https://michigangrapplingco.com/schedule"
+  source_date: "live 2026-11-10"
+  checked: "2026-11-10"
+  note: "week view lists start-end times and durations"
+  classes:
+    - { day: Sun, start: "10:00 AM", title: "Open Mat", minutes: 120 }
+    - { day: Mon, start: "5:30 AM", title: "No-Gi Jiu Jitsu", minutes: 90 }
+    - { day: Mon, start: "10:00 AM", title: "Striking Fundamentals", minutes: ~, mismatch: "not on current schedule (Mon has only 5:30 AM, 5:30 PM, 6:30 PM classes plus privates 12-5 PM)" }
+    - { day: Mon, start: "11:00 AM", title: "No-Gi Jiu Jitsu", minutes: ~, mismatch: "not on current schedule (no Mon 11:00 AM class)" }
+    - { day: Mon, start: "5:30 PM", title: "Kids No-Gi", minutes: 45 }
+    - { day: Mon, start: "6:30 PM", title: "No-Gi Jiu Jitsu", minutes: 90 }
+    - { day: Tue, start: "5:30 AM", title: "Gi Jiu Jitsu", minutes: 90 }
+    - { day: Tue, start: "10:30 AM", title: "Gi Jiu Jitsu", minutes: 90 }
+    - { day: Tue, start: "5:30 PM", title: "Kids Gi Jiu Jitsu", minutes: 45 }
+    - { day: Tue, start: "6:30 PM", title: "Gi Jiu Jitsu", minutes: 90 }
+    - { day: Tue, start: "8:00 PM", title: "Striking Class", minutes: 60 }
+    - { day: Wed, start: "5:30 AM", title: "No-Gi Jiu Jitsu", minutes: 90 }
+    - { day: Wed, start: "10:00 AM", title: "Striking Fundamentals", minutes: ~, mismatch: "not on current schedule (no Wed 10:00 AM class)" }
+    - { day: Wed, start: "11:00 AM", title: "No-Gi Jiu Jitsu", minutes: ~, mismatch: "not on current schedule (no Wed 11:00 AM class)" }
+    - { day: Wed, start: "5:30 PM", title: "Kids No-Gi", minutes: 45 }
+    - { day: Wed, start: "6:30 PM", title: "No-Gi Jiu Jitsu", minutes: 90 }
+    - { day: Thu, start: "5:30 AM", title: "Gi Jiu Jitsu", minutes: 90 }
+    - { day: Thu, start: "10:30 AM", title: "Gi Jiu Jitsu", minutes: 90 }
+    - { day: Thu, start: "5:30 PM", title: "Kids Gi Jiu Jitsu", minutes: ~, mismatch: "no Thu kids class on current schedule" }
+    - { day: Thu, start: "6:30 PM", title: "Gi Jiu Jitsu", minutes: 90 }
+    - { day: Thu, start: "8:00 PM", title: "Striking Class", minutes: 60 }
+    - { day: Fri, start: "5:30 AM", title: "No-Gi Jiu Jitsu", minutes: 90 }
+    - { day: Fri, start: "6:30 PM", title: "No-Gi Jiu Jitsu", minutes: 90 }
+    - { day: Sat, start: "11:00 AM", title: "No-Gi Jiu Jitsu", minutes: 60 }
+    - { day: Sat, start: "12:00 PM", title: "MMA", minutes: 60 }
+
+"Michigan Revolution Wrestling Club (MI-REV)":
+  source: "sheet"
+  checked: "2026-11-10"
+  classes:
+    - { day: Mon, start: "5:00 PM", title: "Youth/HS Powerhouse Wrestling", minutes: 90, from_sheet: true }
+    - { day: Tue, start: "11:00 AM", title: "Homeschool Wrestling / Strength / Mindset", minutes: 210, from_sheet: true }
+    - { day: Tue, start: "5:00 PM", title: "Youth/HS Baseline Technique Wrestling", minutes: 60, from_sheet: true }
+    - { day: Tue, start: "5:30 PM", title: "Intro Wrestling 4-10", minutes: 60, from_sheet: true }
+    - { day: Tue, start: "6:00 PM", title: "Youth/HS Club + Powerhouse Wrestling", minutes: 90, from_sheet: true }
+    - { day: Wed, start: "11:00 AM", title: "Homeschool Wrestling / Strength / Mindset", minutes: 210, from_sheet: true }
+    - { day: Wed, start: "6:00 PM", title: "Youth/HS Club + Powerhouse Wrestling", minutes: 90, from_sheet: true }
+    - { day: Thu, start: "11:00 AM", title: "Homeschool Wrestling / Strength / Mindset", minutes: 210, from_sheet: true }
+    - { day: Thu, start: "5:00 PM", title: "Youth/HS Baseline Technique Wrestling", minutes: 60, from_sheet: true }
+    - { day: Thu, start: "5:30 PM", title: "Intro Wrestling 4-10", minutes: 60, from_sheet: true }
+    - { day: Thu, start: "6:00 PM", title: "Youth/HS Club + Powerhouse Wrestling", minutes: 90, from_sheet: true }
+
+"Michigan Top Team":
+  source: "https://michigantopteam.com/classes"
+  source_date: "live 2026-11-10"
+  checked: "2026-11-10"
+  note: "schedule lists start times only"
+  classes:
+    - { day: Sun, start: "12:00 PM", title: "Judo", minutes: ~ }
+    - { day: Mon, start: "4:45 PM", title: "Little Ninjas (age 5-12)", minutes: ~ }
+    - { day: Mon, start: "5:30 PM", title: "Pro Boxing", minutes: ~ }
+    - { day: Mon, start: "7:00 PM", title: "All Level Kickboxing", minutes: ~ }
+    - { day: Mon, start: "7:00 PM", title: "All Level Wrestling", minutes: ~, mismatch: "not on source; Mon 7:00 PM lists only All Level Kickboxing" }
+    - { day: Mon, start: "8:00 PM", title: "All Level No Gi", minutes: ~ }
+    - { day: Tue, start: "5:30 PM", title: "Pro Wrestling/MMA", minutes: ~ }
+    - { day: Tue, start: "6:30 PM", title: "All Level No Gi", minutes: ~ }
+    - { day: Tue, start: "7:30 PM", title: "All Level Muay Thai", minutes: ~ }
+    - { day: Wed, start: "5:30 PM", title: "Pro Boxing", minutes: ~ }
+    - { day: Wed, start: "6:30 PM", title: "All Level No Gi", minutes: ~ }
+    - { day: Wed, start: "7:30 PM", title: "All Level Boxing", minutes: ~ }
+    - { day: Thu, start: "5:30 PM", title: "Intermediate 9 Round No Gi", minutes: ~ }
+    - { day: Thu, start: "7:00 PM", title: "All Level MMA", minutes: ~ }
+    - { day: Fri, start: "5:30 PM", title: "Intermediate Sparring", minutes: ~ }
+    - { day: Fri, start: "6:30 PM", title: "All Level No Gi", minutes: ~ }
+    - { day: Sat, start: "9:00 AM", title: "All Level Women’s Club", minutes: ~, mismatch: "not on source; Saturday lists only 10:30 AM All Level Boxing" }
+    - { day: Sat, start: "10:30 AM", title: "All Level Boxing", minutes: ~ }
+
+"Monroe Jiu Jitsu":
+  source: "https://www.monroejiujitsu.com/schedule"
+  source_date: "live 2026-11-10"
+  checked: "2026-11-10"
+  note: "schedule lists start times only"
+  classes:
+    - { day: Sun, start: "10:00 AM", title: "Open Mat", minutes: ~ }
+    - { day: Mon, start: "5:00 PM", title: "Kids Class", minutes: ~ }
+    - { day: Mon, start: "6:00 PM", title: "Adult Class", minutes: ~ }
+    - { day: Tue, start: "10:00 AM", title: "Adult Class", minutes: ~ }
+    - { day: Tue, start: "6:00 PM", title: "Women's Self Defense", minutes: ~ }
+    - { day: Wed, start: "5:00 PM", title: "Kids Class", minutes: ~ }
+    - { day: Wed, start: "6:00 PM", title: "Adult Class", minutes: ~ }
+    - { day: Thu, start: "10:00 AM", title: "Adult Class", minutes: ~ }
+    - { day: Thu, start: "6:00 PM", title: "Adult Fundamentals", minutes: ~ }
+
+"New Way Training Center":
+  source: ~
+  checked: "2026-11-10"
+  note: "added 2026-11-10; times from the sheet, lengths not checked yet"
+  classes:
+    - { day: Tue, start: "7:00 PM", title: "Judo (sensei Emily)", minutes: ~, unchecked: true }
+    - { day: Thu, start: "7:00 PM", title: "Judo (sensei Emily)", minutes: ~, unchecked: true }
+    - { day: Thu, start: "7:00 PM", title: "Wrestling", minutes: ~, unchecked: true }
+
+"Plymouth Canton Grappling Academy (PCGA)":
+  source: "https://thepcga.com/schedule.html"
+  source_date: "live 2026-11-10"
+  checked: "2026-11-10"
+  note: "schedule page lists start and end times per day tab"
+  classes:
+    - { day: Sun, start: "9:00 AM", title: "Open Mat", minutes: 120 }
+    - { day: Mon, start: "6:00 AM", title: "All Level Gi", minutes: 60 }
+    - { day: Mon, start: "5:00 PM", title: "Big Kids No Gi Jiu Jitsu", minutes: 45 }
+    - { day: Mon, start: "5:45 PM", title: "Little Ninjas No Gi Jiu Jitsu", minutes: 45 }
+    - { day: Mon, start: "6:30 PM", title: "Intermediate/Advanced No Gi", minutes: 120 }
+    - { day: Tue, start: "6:00 AM", title: "All Level Adult No Gi", minutes: 60 }
+    - { day: Tue, start: "5:00 PM", title: "Little Ninjas No Gi Jiu Jitsu", minutes: 45 }
+    - { day: Tue, start: "5:45 PM", title: "Big Kids No Gi", minutes: 45 }
+    - { day: Tue, start: "6:30 PM", title: "All Level Adult Gi", minutes: 90 }
+    - { day: Wed, start: "6:00 AM", title: "Beginner No Gi", minutes: 60 }
+    - { day: Wed, start: "12:00 PM", title: "All Level No Gi", minutes: 60 }
+    - { day: Wed, start: "5:00 PM", title: "Big Kids No-Gi Jiu Jitsu", minutes: 45 }
+    - { day: Wed, start: "5:45 PM", title: "Little Ninjas No Gi Jiu Jitsu", minutes: 45 }
+    - { day: Wed, start: "6:30 PM", title: "All Level Adult No Gi", minutes: 90 }
+    - { day: Thu, start: "6:00 AM", title: "All Level No Gi", minutes: 60 }
+    - { day: Thu, start: "12:00 PM", title: "All Level No Gi", minutes: 60 }
+    - { day: Thu, start: "5:00 PM", title: "Little Ninjas No Gi Jiu Jitsu", minutes: 45 }
+    - { day: Thu, start: "5:45 PM", title: "Big Kids Gi Jiu Jitsu", minutes: 45 }
+    - { day: Thu, start: "6:30 PM", title: "Wrestling for Jiu Jitsu", minutes: 60, mismatch: "source has Wrestling for Jiu Jitsu Thu 7:30-8:30 PM; Thu 6:30-7:30 PM slot is All Level Gi" }
+    - { day: Thu, start: "7:30 PM", title: "Beginner No Gi", minutes: ~, mismatch: "no Thu Beginner No Gi on source; Thu 7:30 PM has Wrestling for Jiu Jitsu and Open Mat" }
+    - { day: Thu, start: "7:30 PM", title: "Open Mat", minutes: 60 }
+    - { day: Fri, start: "6:00 AM", title: "All Level No Gi", minutes: 60 }
+    - { day: Fri, start: "12:00 PM", title: "Leg Locks", minutes: 60 }
+    - { day: Fri, start: "6:30 PM", title: "No Gi Comp Training", minutes: ~, mismatch: "not on source; Friday lists only 6:00 AM All Level No Gi and 12:00 PM Leg Locks" }
+    - { day: Sat, start: "10:00 AM", title: "Beginner No Gi", minutes: 60 }
+    - { day: Sat, start: "10:00 AM", title: "Big Kids Gi Jiu Jitsu", minutes: 45 }
+    - { day: Sat, start: "11:00 AM", title: "Intermediate/Advanced No Gi", minutes: 120 }
+
+"Plymouth Wrestling Academy":
+  source: "sheet"
+  checked: "2026-11-10"
+  classes:
+    - { day: Mon, start: "5:45 PM", title: "Youth Wrestling 5-8", minutes: 45, from_sheet: true }
+    - { day: Mon, start: "6:40 PM", title: "Youth Wrestling 9-12", minutes: 60, from_sheet: true }
+    - { day: Thu, start: "5:45 PM", title: "Youth Wrestling 5-8", minutes: 45, from_sheet: true }
+    - { day: Thu, start: "6:40 PM", title: "Youth Wrestling 9-12", minutes: 60, from_sheet: true }
+
+"Proving Grounds Jiu Jitsu & MMA":
+  source: "https://provinggroundsjj.sites.zenplanner.com/calendar.cfm"
+  source_date: "live 2026-11-10 (week of 2026-11-08)"
+  checked: "2026-11-10"
+  note: "end times from each Zen Planner class detail page (enrollment.cfm)"
+  classes:
+    - { day: Sun, start: "9:00 AM", title: "Women only NoGi Jiu Jitsu Open Roll", minutes: 60 }
+    - { day: Sun, start: "10:00 AM", title: "NoGi Jiu Jitsu Competition Class", minutes: 60 }
+    - { day: Mon, start: "6:00 AM", title: "NoGi Jiu Jitsu", minutes: 60 }
+    - { day: Mon, start: "12:00 PM", title: "NoGi Jiu Jitsu", minutes: 60 }
+    - { day: Mon, start: "5:00 PM", title: "Kids MMA", minutes: 60 }
+    - { day: Mon, start: "5:00 PM", title: "NoGi Jiu Jitsu", minutes: 60 }
+    - { day: Mon, start: "6:00 PM", title: "Jiu Jitsu Open Rolling (Gi or NoGi)", minutes: 60 }
+    - { day: Mon, start: "6:00 PM", title: "Kids Jiu Jitsu (Gi)", minutes: 60 }
+    - { day: Mon, start: "7:00 PM", title: "Adult Jiu Jitsu (Gi)", minutes: 60 }
+    - { day: Tue, start: "6:00 AM", title: "NoGi Jiu Jitsu", minutes: 60 }
+    - { day: Tue, start: "12:00 PM", title: "Adult Jiu Jitsu (Gi)", minutes: 60 }
+    - { day: Tue, start: "5:00 PM", title: "NoGi Open Mat", minutes: 60 }
+    - { day: Tue, start: "6:00 PM", title: "NoGi Jiu Jitsu", minutes: 60 }
+    - { day: Tue, start: "7:00 PM", title: "Jiu Jitsu Fundamentals (Gi)", minutes: 60 }
+    - { day: Wed, start: "6:00 AM", title: "Adult Jiu Jitsu (Gi)", minutes: 60 }
+    - { day: Wed, start: "5:00 PM", title: "Kids MMA", minutes: 60 }
+    - { day: Wed, start: "5:00 PM", title: "NoGi Jiu Jitsu", minutes: 60 }
+    - { day: Wed, start: "6:00 PM", title: "Jiu Jitsu Open Rolling (Gi or NoGi)", minutes: 60 }
+    - { day: Wed, start: "6:00 PM", title: "Kids Jiu Jitsu (Gi)", minutes: 60 }
+    - { day: Wed, start: "7:00 PM", title: "Adult Jiu Jitsu (Gi)", minutes: 60 }
+    - { day: Thu, start: "6:00 AM", title: "Adult Jiu Jitsu (Gi)", minutes: 60 }
+    - { day: Thu, start: "12:00 PM", title: "Adult Jiu Jitsu (Gi)", minutes: 60 }
+    - { day: Thu, start: "5:00 PM", title: "NoGi Open Mat", minutes: 60 }
+    - { day: Thu, start: "6:00 PM", title: "NoGi Jiu Jitsu", minutes: 60 }
+    - { day: Thu, start: "7:00 PM", title: "Adult Jiu Jitsu (Gi)", minutes: 60 }
+    - { day: Fri, start: "6:00 AM", title: "NoGi Jiu Jitsu", minutes: 60 }
+    - { day: Fri, start: "12:00 PM", title: "NoGi Jiu Jitsu", minutes: 60 }
+    - { day: Fri, start: "5:00 PM", title: "Kids MMA", minutes: 60 }
+    - { day: Fri, start: "5:00 PM", title: "Teen Jiu Jitsu (NoGi) (Teens)", minutes: 60 }
+    - { day: Fri, start: "6:00 PM", title: "Kids Jiu Jitsu (NoGi)", minutes: 60 }
+    - { day: Sat, start: "10:00 AM", title: "Jiu Jitsu Drilling (Gi / Nogi - Bring Both!)", minutes: 60 }
+    - { day: Sat, start: "11:00 AM", title: "Gi Competition Class", minutes: 60 }
+
+"Rochester Avon Recreation Authority (RARA)":
+  source: ~
+  checked: "2026-11-10"
+  note: "added 2026-11-10; times from the sheet, lengths not checked yet"
+  classes:
+    - { day: Tue, start: "7:00 PM", title: "Judo (sensei Steve)", minutes: ~, unchecked: true }
+    - { day: Thu, start: "7:00 PM", title: "Judo (sensei Steve)", minutes: ~, unchecked: true }
+
+"Ronaldo Candido Academy BJJ":
+  source: "https://www.rcabjj.com/s-c-h-e-d-u-l-e"
+  source_date: "live 2026-11-10"
+  checked: "2026-11-10"
+  note: "each class lists an explicit 'Duration: N minutes'; some end times have AM/PM typos, so durations come from the Duration field"
+  classes:
+    - { day: Sun, start: "11:00 AM", title: "Open Mat", minutes: 120 }
+    - { day: Mon, start: "6:00 AM", title: "Adult BJJ Basics", minutes: 60 }
+    - { day: Mon, start: "11:00 AM", title: "Adult BJJ Basics", minutes: 60 }
+    - { day: Mon, start: "5:15 PM", title: "Juniors BJJ 5-8", minutes: 45 }
+    - { day: Mon, start: "6:00 PM", title: "Youth BJJ 9-13", minutes: 60 }
+    - { day: Mon, start: "7:00 PM", title: "Adult BJJ Basics", minutes: 90 }
+    - { day: Tue, start: "6:00 AM", title: "Adult No-Gi BJJ", minutes: 60 }
+    - { day: Tue, start: "11:00 AM", title: "Adult No-Gi BJJ", minutes: 60 }
+    - { day: Tue, start: "5:15 PM", title: "Juniors BJJ 5-8", minutes: 45 }
+    - { day: Tue, start: "6:00 PM", title: "Youth BJJ 9-13", minutes: 60 }
+    - { day: Tue, start: "7:00 PM", title: "Adult No-Gi BJJ", minutes: 90 }
+    - { day: Wed, start: "6:00 AM", title: "BJJ Drills / Q&A", minutes: 60 }
+    - { day: Wed, start: "11:00 AM", title: "BJJ Drills / Q&A", minutes: 60 }
+    - { day: Wed, start: "6:00 PM", title: "White Belt BJJ Drills", minutes: 60 }
+    - { day: Wed, start: "7:00 PM", title: "Color Belt BJJ", minutes: 60 }
+    - { day: Thu, start: "6:00 AM", title: "Adult No-Gi BJJ", minutes: 60 }
+    - { day: Thu, start: "11:00 AM", title: "Adult No-Gi BJJ", minutes: 60 }
+    - { day: Thu, start: "5:15 PM", title: "Juniors BJJ 5-8", minutes: 45 }
+    - { day: Thu, start: "6:00 PM", title: "Youth BJJ 9-13", minutes: 60 }
+    - { day: Thu, start: "7:00 PM", title: "Adult No-Gi BJJ", minutes: 90 }
+    - { day: Fri, start: "6:00 AM", title: "Adult BJJ Sparring", minutes: 60 }
+    - { day: Fri, start: "11:00 AM", title: "Adult BJJ Sparring", minutes: 60 }
+    - { day: Fri, start: "5:15 PM", title: "Juniors BJJ 5-8", minutes: 45 }
+    - { day: Fri, start: "6:00 PM", title: "Youth BJJ 9-13", minutes: 60 }
+    - { day: Fri, start: "7:00 PM", title: "Adult BJJ Sparring", minutes: 90 }
+    - { day: Sat, start: "10:00 AM", title: "Kids Judo 5-12", minutes: 60 }
+    - { day: Sat, start: "11:00 AM", title: "Adult Judo", minutes: 60 }
+
+"Roots Combat Club":
+  source: "https://rootsjj.pushpress.com/open/calendar"
+  source_date: "live 2026-11-10 (week of Nov 8-14)"
+  checked: "2026-11-10"
+  note: "PushPress calendar embedded on rootsjj.com/schedule; site text lists start times only"
+  classes:
+    - { day: Sun, start: "11:30 AM", title: "Adult Wrestling", minutes: 60 }
+    - { day: Mon, start: "11:30 AM", title: "Adult Jiu Jitsu (ALL LEVELS)", minutes: 60 }
+    - { day: Mon, start: "5:30 PM", title: "Kids Jiu Jitsu Beginner GI (Ages 6-12)", minutes: 60 }
+    - { day: Mon, start: "6:30 PM", title: "Adult Kickboxing", minutes: 60 }
+    - { day: Mon, start: "6:30 PM", title: "Kids Wrestling (Ages 9-13)", minutes: ~, mismatch: "calendar shows Kids & Teens intermediate NOGI (ages 9-13) 6:30-7:30 PM in this slot, no kids wrestling" }
+    - { day: Mon, start: "7:30 PM", title: "Adult Jiu Jitsu Fundamentals", minutes: 60, mismatch: "listed as Adult fundamentals GI 7:30-8:30 PM" }
+    - { day: Mon, start: "7:30 PM", title: "Adult Boxing / Adult Wrestling (w/ Jarred Brooks)", minutes: 60 }
+    - { day: Mon, start: "7:30 PM", title: "Adult NOGI Jiu Jitsu", minutes: ~, mismatch: "no NOGI class Mon 7:30; calendar has Adult Intro to Jiu Jitsu 7:30-8:30 PM" }
+    - { day: Mon, start: "8:30 PM", title: "MMA", minutes: 60 }
+    - { day: Tue, start: "9:00 AM", title: "Yoga", minutes: 60 }
+    - { day: Tue, start: "4:30 PM", title: "Kids Jiu Jitsu (Ages 3-6)", minutes: 80, mismatch: "listed as Kids Jiu Jitsu (Ages 3-5) 4:30-5:50 PM" }
+    - { day: Tue, start: "5:30 PM", title: "Kids & Teens NOGI Jiu Jitsu (Ages 7-13)", minutes: 60 }
+    - { day: Tue, start: "5:30 PM", title: "Kids Kickboxing (6-8)", minutes: 60 }
+    - { day: Tue, start: "6:30 PM", title: "Adult NOGI Jiu Jitsu Intermediate", minutes: 60, mismatch: "listed as Adult GI & NOGI Jiu Jitsu Intermediate" }
+    - { day: Tue, start: "6:30 PM", title: "Adult Intro Kickboxing", minutes: 60 }
+    - { day: Tue, start: "6:30 PM", title: "Teens Kickboxing (Ages 9-13)", minutes: 60 }
+    - { day: Tue, start: "7:30 PM", title: "Adult NOGI Jiu Jitsu (10 Round Tuesday)", minutes: 60 }
+    - { day: Tue, start: "8:30 PM", title: "Open Mat", minutes: 60 }
+    - { day: Wed, start: "9:00 AM", title: "Yoga", minutes: 60 }
+    - { day: Wed, start: "11:30 AM", title: "Adult Jiu Jitsu (ALL LEVELS)", minutes: 60 }
+    - { day: Wed, start: "6:30 PM", title: "Adult Kickboxing", minutes: 60 }
+    - { day: Wed, start: "6:30 PM", title: "Kids Wrestling (Ages 9-13)", minutes: ~, mismatch: "calendar shows Kids & Teens intermediate NOGI (ages 9-13) 6:30-7:30 PM in this slot, no kids wrestling" }
+    - { day: Wed, start: "6:30 PM", title: "Teens Jiu Jitsu (Ages 12-14)", minutes: ~, mismatch: "not on calendar; Wed has Kids Jiu Jitsu beginner GI 5:30-6:30 PM" }
+    - { day: Wed, start: "7:30 PM", title: "Adult Jiu Jitsu Fundamentals", minutes: 60, mismatch: "listed as Adult fundamentals GI 7:30-8:30 PM" }
+    - { day: Wed, start: "7:30 PM", title: "Adult Boxing / Adult Wrestling (w/ Jarred Brooks)", minutes: 60 }
+    - { day: Wed, start: "8:30 PM", title: "MMA", minutes: 60 }
+    - { day: Thu, start: "4:30 PM", title: "Kids Jiu Jitsu (Ages 3-6)", minutes: 80, mismatch: "listed as Kids Jiu Jitsu (Ages 3-5) 4:30-5:50 PM" }
+    - { day: Thu, start: "5:30 PM", title: "Kids & Teens NOGI Jiu Jitsu (Ages 7-13)", minutes: 60 }
+    - { day: Thu, start: "5:30 PM", title: "Kids Kickboxing (6-8)", minutes: 60 }
+    - { day: Thu, start: "6:30 PM", title: "Adult NOGI Jiu Jitsu Intermediate", minutes: 60 }
+    - { day: Thu, start: "6:30 PM", title: "Adult Intro Kickboxing", minutes: 60 }
+    - { day: Thu, start: "6:30 PM", title: "Teens Kickboxing (9-13)", minutes: 60 }
+    - { day: Thu, start: "7:30 PM", title: "Adult Kickboxing", minutes: 60 }
+    - { day: Thu, start: "7:30 PM", title: "Adult NOGI Jiu Jitsu (Positional Rounds)", minutes: 60 }
+    - { day: Thu, start: "8:30 PM", title: "Open Mat", minutes: 60 }
+    - { day: Fri, start: "9:00 AM", title: "Yoga", minutes: 60 }
+    - { day: Fri, start: "11:30 AM", title: "Adult Jiu Jitsu (ALL LEVELS)", minutes: ~, mismatch: "calendar shows Fri Adult Jiu jitsu (ALL LEVELS) 10:30-11:30 AM" }
+    - { day: Fri, start: "5:30 PM", title: "Kids Wrestling (Ages 8-12)", minutes: 60 }
+    - { day: Fri, start: "5:30 PM", title: "Teens Jiu Jitsu (Ages 12-14)", minutes: ~, mismatch: "not on calendar for Fri" }
+    - { day: Fri, start: "6:30 PM", title: "Fundamental Wrestling", minutes: 60 }
+    - { day: Fri, start: "6:30 PM", title: "Adult Kickboxing", minutes: 60 }
+    - { day: Fri, start: "7:30 PM", title: "Adult Boxing", minutes: 60 }
+    - { day: Fri, start: "7:30 PM", title: "Wrestling (w/ Jarred Brooks)", minutes: 60, mismatch: "listed as Adult Wrestling" }
+    - { day: Fri, start: "7:30 PM", title: "Adult Jiu Jitsu Fundamentals", minutes: 60, mismatch: "Fri 7:30-8:30 PM listed as Adult NOGI Fundamentals / Intro Jiu Jitsu GI / Adult Intro to Jiu Jitsu" }
+    - { day: Fri, start: "8:30 PM", title: "MMA", minutes: 60 }
+    - { day: Sat, start: "11:00 AM", title: "Adult Jiu Jitsu Fundamentals", minutes: ~, mismatch: "not on calendar for Sat" }
+    - { day: Sat, start: "11:00 AM", title: "Fundamental Striking", minutes: 60 }
+    - { day: Sat, start: "12:00 PM", title: "Open Mat", minutes: ~, mismatch: "no open mat on calendar; Sat shows Adult NOGI Jiu-Jitsu (ALL LEVELS) listed as 12:00am-1:00pm (start likely a data-entry error)" }
+    - { day: Sat, start: "12:00 PM", title: "NOGI Open Mat", minutes: ~, mismatch: "Sat shows Adult NOGI Jiu-Jitsu (ALL LEVELS) listed as 12:00am-1:00pm (start likely a data-entry error)" }
+
+"Roughneck Wrestling Club Detroit":
+  source: "sheet"
+  checked: "2026-11-10"
+  classes:
+    - { day: Mon, start: "4:00 PM", title: "Youth Folkstyle Wrestling", minutes: 90, from_sheet: true }
+    - { day: Wed, start: "4:00 PM", title: "Youth Folkstyle Wrestling", minutes: 90, from_sheet: true }
+
+"Saline Jiu-Jitsu Academy":
+  source: "sheet"
+  checked: "2026-11-10"
+  classes:
+    - { day: Mon, start: "4:15 PM", title: "Youth Jiu-Jitsu 7+", minutes: 45, from_sheet: true }
+    - { day: Mon, start: "5:15 PM", title: "Little Grapplers 4-7", minutes: 30, from_sheet: true }
+    - { day: Mon, start: "6:00 PM", title: "Adult All Levels", minutes: 60, from_sheet: true }
+    - { day: Tue, start: "4:15 PM", title: "Little Grapplers 4-7", minutes: 30, from_sheet: true }
+    - { day: Tue, start: "5:00 PM", title: "Youth Jiu-Jitsu 7+", minutes: 45, from_sheet: true }
+    - { day: Tue, start: "6:00 PM", title: "Adult Situational Sparring / Live Drilling", minutes: 60, from_sheet: true }
+    - { day: Wed, start: "6:00 PM", title: "Adult All Levels", minutes: 60, from_sheet: true }
+    - { day: Thu, start: "4:15 PM", title: "Little Grapplers 4-7", minutes: 30, from_sheet: true }
+    - { day: Thu, start: "5:00 PM", title: "Youth Jiu-Jitsu 7+", minutes: 45, from_sheet: true }
+    - { day: Thu, start: "6:00 PM", title: "Adult No-Gi Situational Sparring / Live Drilling", minutes: 45, from_sheet: true }
+    - { day: Thu, start: "7:00 PM", title: "Open Mat / Lab", minutes: 60, from_sheet: true }
+    - { day: Fri, start: "4:15 PM", title: "Youth Jiu-Jitsu 7+", minutes: 45, from_sheet: true }
+    - { day: Fri, start: "5:15 PM", title: "Little Grapplers 4-7", minutes: 30, from_sheet: true }
+    - { day: Fri, start: "6:00 PM", title: "Adult All Levels", minutes: 60, from_sheet: true }
+
+"Shojin Judo":
+  source: ~
+  checked: "2026-11-10"
+  note: "shojinjudo.com offline; 2025-06 Wayback /join lists only block hours (Tue 5-8pm, Fri 4:30-8:15pm, Sat 12-2pm), not per class"
+  classes:
+    - { day: Tue, start: "5:00 PM", title: "Adult Beginner Judo", minutes: ~ }
+    - { day: Tue, start: "6:00 PM", title: "Adult Intermediate Judo", minutes: ~ }
+    - { day: Tue, start: "7:00 PM", title: "Adult Advanced Judo", minutes: ~ }
+    - { day: Fri, start: "4:30 PM", title: "Youth Beginner Judo 6-15", minutes: ~ }
+    - { day: Fri, start: "5:15 PM", title: "Youth Intermediate Judo 6-15", minutes: ~ }
+    - { day: Fri, start: "6:15 PM", title: "Adult Intermediate Judo", minutes: ~ }
+    - { day: Fri, start: "7:15 PM", title: "Adult Advanced Judo", minutes: ~ }
+    - { day: Sat, start: "12:00 PM", title: "Adult Beginner Judo", minutes: ~ }
+    - { day: Sat, start: "1:00 PM", title: "Adult Intermediate Judo", minutes: ~ }
+
+"The Garage Jiu-Jitsu":
+  source: ~
+  checked: "2026-11-10"
+  note: "site schedule graphic lists start times only"
+  classes:
+    - { day: Mon, start: "5:15 PM", title: "Kids No-Gi BJJ 4-12", minutes: ~ }
+    - { day: Mon, start: "6:30 PM", title: "Adult No-Gi BJJ", minutes: ~ }
+    - { day: Tue, start: "5:15 PM", title: "Kids No-Gi BJJ 4-12", minutes: ~ }
+    - { day: Tue, start: "6:30 PM", title: "Adult No-Gi BJJ", minutes: ~ }
+    - { day: Wed, start: "5:15 PM", title: "Kids No-Gi BJJ 4-12", minutes: ~ }
+    - { day: Wed, start: "6:30 PM", title: "Adult No-Gi BJJ", minutes: ~ }
+    - { day: Thu, start: "5:15 PM", title: "Kids No-Gi BJJ 4-12", minutes: ~ }
+    - { day: Thu, start: "6:30 PM", title: "Adult No-Gi BJJ", minutes: ~ }
+
+"Tru Jiu Jitsu":
+  source: "https://studio.zenplanner.com/zenplanner/studio/freeTrialWidget.html?apiKey=e5bfed2b-9baa-4d8d-a82e-f3e4bfb2bdef&widgetInstanceId=7237acb5-02da-4c34-bea2-755f2ce663d6&module=freetrial"
+  source_date: "live 2026-11-10"
+  checked: "2026-11-10"
+  note: "trujiujitsu.com/calendar has no schedule text; Zen Planner free-trial widget only showed Tue Nov 10 evening to Wed Nov 11"
+  classes:
+    - { day: Mon, start: "6:00 AM", title: "Adult BJJ", minutes: ~ }
+    - { day: Mon, start: "5:00 PM", title: "Kids BJJ 7+", minutes: ~ }
+    - { day: Mon, start: "7:00 PM", title: "Adult BJJ", minutes: ~ }
+    - { day: Tue, start: "7:00 AM", title: "Adult BJJ", minutes: ~ }
+    - { day: Tue, start: "5:00 PM", title: "Kids BJJ 7+", minutes: ~, mismatch: "widget shows Tue 5:00-6:00 PM as Kids Striking" }
+    - { day: Tue, start: "6:00 PM", title: "Adult BJJ", minutes: 60 }
+    - { day: Wed, start: "6:00 AM", title: "Adult BJJ", minutes: 60 }
+    - { day: Wed, start: "5:00 PM", title: "Kids BJJ 7+", minutes: 60 }
+    - { day: Wed, start: "7:00 PM", title: "Adult BJJ", minutes: ~, mismatch: "widget shows Wed Jiu Jitsu All Levels 6:00-7:00 PM" }
+    - { day: Thu, start: "7:00 AM", title: "Adult BJJ", minutes: ~ }
+    - { day: Thu, start: "5:00 PM", title: "Kids BJJ 7+", minutes: ~ }
+    - { day: Thu, start: "6:00 PM", title: "Adult BJJ", minutes: ~ }
+    - { day: Sat, start: "8:00 AM", title: "Kids BJJ 7+", minutes: ~ }
+    - { day: Sat, start: "9:00 AM", title: "Adult BJJ", minutes: ~ }
+
+"TRUE Martial Arts Birmingham":
+  source: "sheet"
+  checked: "2026-11-10"
+  classes:
+    - { day: Tue, start: "5:30 PM", title: "Kids BJJ 7-12", minutes: 60, from_sheet: true }
+    - { day: Tue, start: "7:30 PM", title: "Teens / Adults BJJ", minutes: 60, from_sheet: true }
+    - { day: Thu, start: "4:00 PM", title: "Teen BJJ 13-17", minutes: 60, from_sheet: true }
+    - { day: Thu, start: "5:30 PM", title: "Kids BJJ 7-12", minutes: 60, from_sheet: true }
+    - { day: Thu, start: "7:30 PM", title: "Teens / Adults BJJ", minutes: 60, from_sheet: true }
+    - { day: Fri, start: "9:00 AM", title: "Kids BJJ 7-12", minutes: 60, from_sheet: true }
+    - { day: Fri, start: "5:30 PM", title: "Kids BJJ 7-12", minutes: 60, from_sheet: true }
+    - { day: Sat, start: "8:00 AM", title: "Teens / Adults BJJ", minutes: 60, from_sheet: true }
+    - { day: Sat, start: "9:00 AM", title: "Kids BJJ 7-12", minutes: 60, from_sheet: true }
+
+"Victorious MMA":
+  source: ~
+  checked: "2026-11-10"
+  note: "victoriousmma.com/schedule lists start times only (live and 2025-03 Wayback copy)"
+  classes:
+    - { day: Sun, start: "11:00 AM", title: "Veterans' BJJ", minutes: ~ }
+    - { day: Mon, start: "6:00 AM", title: "Gi BJJ", minutes: ~ }
+    - { day: Mon, start: "12:00 PM", title: "Gi BJJ", minutes: ~ }
+    - { day: Mon, start: "5:00 PM", title: "Kids BJJ", minutes: ~ }
+    - { day: Mon, start: "7:00 PM", title: "Gi BJJ", minutes: ~ }
+    - { day: Tue, start: "6:00 AM", title: "Gi BJJ", minutes: ~ }
+    - { day: Tue, start: "12:00 PM", title: "No-Gi BJJ", minutes: ~ }
+    - { day: Tue, start: "5:00 PM", title: "Kids BJJ", minutes: ~ }
+    - { day: Tue, start: "7:00 PM", title: "No-Gi BJJ", minutes: ~ }
+    - { day: Wed, start: "12:00 PM", title: "Gi BJJ", minutes: ~ }
+    - { day: Wed, start: "5:00 PM", title: "Kids BJJ", minutes: ~ }
+    - { day: Wed, start: "7:00 PM", title: "Gi BJJ", minutes: ~ }
+    - { day: Thu, start: "6:00 AM", title: "Gi BJJ", minutes: ~ }
+    - { day: Thu, start: "12:00 PM", title: "No-Gi BJJ", minutes: ~ }
+    - { day: Thu, start: "5:00 PM", title: "Kids BJJ", minutes: ~ }
+    - { day: Thu, start: "7:00 PM", title: "No-Gi BJJ", minutes: ~ }
+    - { day: Fri, start: "12:00 PM", title: "Gi BJJ", minutes: ~ }
+    - { day: Fri, start: "5:00 PM", title: "Kids BJJ", minutes: ~ }
+    - { day: Fri, start: "7:00 PM", title: "Judo", minutes: ~ }
+    - { day: Sat, start: "9:30 AM", title: "No-Gi BJJ", minutes: ~ }
+
+"Vision BJJ Farmington Hills":
+  source: ~
+  checked: "2026-11-10"
+  note: "site has no schedule; Wix booking widget does not render, no times found"
+  classes:
+    - { day: Mon, start: "5:00 PM", title: "Kids Gi BJJ 6+", minutes: ~ }
+    - { day: Mon, start: "6:00 PM", title: "Adult Gi BJJ", minutes: ~ }
+    - { day: Tue, start: "6:00 AM", title: "Adult Gi BJJ", minutes: ~ }
+    - { day: Tue, start: "6:00 PM", title: "Adult Beginner Gi BJJ", minutes: ~ }
+    - { day: Wed, start: "5:00 PM", title: "Kids Gi BJJ 6+", minutes: ~ }
+    - { day: Wed, start: "6:00 PM", title: "Adult No-Gi BJJ", minutes: ~ }
+    - { day: Thu, start: "6:00 AM", title: "Adult Gi BJJ", minutes: ~ }
+    - { day: Thu, start: "6:00 PM", title: "Adult Beginner Gi BJJ", minutes: ~ }
+    - { day: Sat, start: "10:00 AM", title: "Kids Gi BJJ 6+", minutes: ~ }
+    - { day: Sat, start: "11:00 AM", title: "Adult Gi BJJ", minutes: ~ }
+
+"Vision BJJ Wixom":
+  source: "https://visionbjj.com/programs-schedule/"
+  source_date: "live 2026-11-10"
+  checked: "2026-11-10"
+  classes:
+    - { day: Tue, start: "5:00 PM", title: "Kids BJJ", minutes: 60 }
+    - { day: Tue, start: "6:00 PM", title: "Adult BJJ", minutes: 120 }
+    - { day: Thu, start: "5:00 PM", title: "Kids BJJ", minutes: 60 }
+    - { day: Thu, start: "6:00 PM", title: "Adult BJJ", minutes: 120 }
+    - { day: Sat, start: "12:00 PM", title: "Kids BJJ", minutes: 60 }
+    - { day: Sat, start: "12:00 PM", title: "Adult BJJ", minutes: 90 }
+
+"Voyage Jiu Jitsu":
+  source: "https://voyagejiujitsu.com/schedule/"
+  source_date: "live 2026-11-10"
+  checked: "2026-11-10"
+  note: "weekly table with start-end times per day column"
+  classes:
+    - { day: Sun, start: "1:00 PM", title: "Wrestling", minutes: ~, mismatch: "no Sun 1:00 PM Wrestling; Sunday shows only Open Mat 12:00-2:00 PM" }
+    - { day: Mon, start: "12:00 PM", title: "Adults BJJ – No gi", minutes: 60 }
+    - { day: Mon, start: "4:45 PM", title: "Kids 4-7", minutes: 45 }
+    - { day: Mon, start: "5:30 PM", title: "Kids 8-16", minutes: 60 }
+    - { day: Mon, start: "6:30 PM", title: "Adult Gi BJJ", minutes: 60 }
+    - { day: Mon, start: "7:30 PM", title: "Comp", minutes: 60 }
+    - { day: Tue, start: "6:00 AM", title: "Adults BJJ – No gi", minutes: 60 }
+    - { day: Tue, start: "5:00 PM", title: "Comp (Alternating Gi/No-Gi)", minutes: 60 }
+    - { day: Tue, start: "6:00 PM", title: "Adults BJJ – No gi", minutes: 60 }
+    - { day: Wed, start: "12:00 PM", title: "Adults Gi BJJ", minutes: 60 }
+    - { day: Wed, start: "4:45 PM", title: "Kids 4-7", minutes: 45 }
+    - { day: Wed, start: "5:30 PM", title: "Kids 8-16", minutes: 60 }
+    - { day: Wed, start: "6:30 PM", title: "Adult Gi BJJ", minutes: 60, mismatch: "source titles Wed 6:30-7:30 PM as Adult BJJ – No-Gi" }
+    - { day: Wed, start: "7:30 PM", title: "Comp", minutes: 60 }
+    - { day: Thu, start: "6:00 AM", title: "Adults BJJ – No gi", minutes: 60, mismatch: "source titles Thu 6:00-7:00 AM as Adults BJJ – Gi" }
+    - { day: Thu, start: "5:00 PM", title: "Gi BJJ Fundamentals", minutes: 60 }
+    - { day: Thu, start: "6:00 PM", title: "Adult BJJ", minutes: 90 }
+    - { day: Fri, start: "12:00 PM", title: "Adult BJJ (Alternating Gi/No-Gi)", minutes: 60 }
+    - { day: Fri, start: "6:30 PM", title: "Open Mat", minutes: 90, mismatch: "source lists Fri Open Mat 6:00-7:30 PM" }
+    - { day: Sat, start: "8:30 AM", title: "Adult BJJ (Alternating Gi/No-Gi)", minutes: 90 }
+    - { day: Sat, start: "10:00 AM", title: "Drilling (Alternating Gi/No-Gi)", minutes: 60 }
+    - { day: Sat, start: "11:00 AM", title: "Comp (Alternating Gi/No-Gi)", minutes: 90 }
+    - { day: Sat, start: "12:00 PM", title: "Adult's Open Mat", minutes: ~, mismatch: "no Sat 12:00 PM Open Mat; source has Open Mat 12:00-2:00 PM on Sunday" }
+
+"Warrior Judo Club Canton":
+  source: "https://warriorjudocanton.wixsite.com/home"
+  source_date: "live 2026-11-10"
+  checked: "2026-11-10"
+  note: "homepage announces Saturday and Sunday judo classes 5:00-7:00 PM (free trial classes); no full schedule page"
+  classes:
+    - { day: Sun, start: "5:00 PM", title: "Judo", minutes: 120 }
+    - { day: Sat, start: "5:00 PM", title: "Judo", minutes: 120 }
+
+"Warrior Way Martial Arts":
+  source: "https://warriorway.com/wp-content/uploads/2025/06/ww_schedule_25.pdf"
+  source_date: "2025-06 PDF, still linked from live schedule page 2026-11-10"
+  checked: "2026-11-10"
+  classes:
+    - { day: Sun, start: "9:00 AM", title: "Gracie Jiu-Jitsu No-Gi Mixed", minutes: 60 }
+    - { day: Mon, start: "10:30 AM", title: "Gracie Jiu-Jitsu No-Gi Mixed", minutes: 60 }
+    - { day: Mon, start: "5:00 PM", title: "Gracie Jiu-Jitsu No-Gi Intermediate (1+ stripes)", minutes: 60 }
+    - { day: Mon, start: "6:00 PM", title: "Gracie Jiu-Jitsu Fundamentals", minutes: 60 }
+    - { day: Tue, start: "12:00 PM", title: "Gracie Jiu-Jitsu Mixed", minutes: 60 }
+    - { day: Tue, start: "5:00 PM", title: "Youth Gracie Jiu-Jitsu No-Gi (Ages 10+)", minutes: 60 }
+    - { day: Tue, start: "6:00 PM", title: "Gracie Jiu-Jitsu Mixed", minutes: 60 }
+    - { day: Tue, start: "7:00 PM", title: "Gracie Jiu-Jitsu No-Gi Mixed", minutes: 60 }
+    - { day: Wed, start: "10:30 AM", title: "Gracie Jiu-Jitsu No-Gi Mixed", minutes: 60 }
+    - { day: Wed, start: "5:00 PM", title: "Gracie Jiu-Jitsu No-Gi Intermediate (1+ stripes)", minutes: 60 }
+    - { day: Wed, start: "6:00 PM", title: "Gracie Jiu-Jitsu Fundamentals", minutes: 60 }
+    - { day: Thu, start: "5:30 AM", title: "Gracie Jiu-Jitsu Mixed", minutes: 60 }
+    - { day: Thu, start: "12:00 PM", title: "Gracie Jiu-Jitsu Mixed", minutes: 60 }
+    - { day: Thu, start: "5:00 PM", title: "Youth Gracie Jiu-Jitsu (Ages 10+)", minutes: 60 }
+    - { day: Thu, start: "6:00 PM", title: "Gracie Jiu-Jitsu Self-Defense Mastery", minutes: 60 }
+    - { day: Thu, start: "7:00 PM", title: "Gracie Jiu-Jitsu Advanced (2+ stripes)", minutes: 90 }
+    - { day: Fri, start: "9:30 AM", title: "Law Enforcement Gracie Jiu-Jitsu", minutes: 60 }
+    - { day: Fri, start: "10:30 AM", title: "Gracie Jiu-Jitsu No-Gi Mixed", minutes: 60 }
+    - { day: Fri, start: "6:00 PM", title: "Gracie Jiu-Jitsu No-Gi Advanced (2+ stripes)", minutes: 90 }
+    - { day: Sat, start: "11:00 AM", title: "Youth Gracie Jiu-Jitsu (Ages 10+)", minutes: 60 }
+    - { day: Sat, start: "12:00 PM", title: "Gracie Jiu-Jitsu Fundamentals", minutes: 60 }
+    - { day: Sat, start: "1:00 PM", title: "Adult Open Training", minutes: 60 }
+
+"Westside Jiu Jitsu Academy - Allen Park":
+  source: "https://westsidejja.com/ap-schedule/"
+  source_date: "live 2026-11-10"
+  checked: "2026-11-10"
+  classes:
+    - { day: Sun, start: "11:00 AM", title: "Kids Jiu Jitsu", minutes: 60 }
+    - { day: Sun, start: "11:00 AM", title: "Wrestling", minutes: 60 }
+    - { day: Sun, start: "12:00 PM", title: "Open Mat", minutes: ~, mismatch: "source lists Sun 12:00-1:00 PM Fundamentals (Nogi), no Open Mat" }
+    - { day: Mon, start: "7:00 PM", title: "Gi Jiu Jitsu", minutes: 60 }
+    - { day: Tue, start: "6:00 PM", title: "Women's Jiu Jitsu", minutes: 60 }
+    - { day: Tue, start: "7:00 PM", title: "Kids Jiu Jitsu", minutes: 60 }
+    - { day: Tue, start: "7:00 PM", title: "No Gi Jiu Jitsu", minutes: 60 }
+    - { day: Wed, start: "5:00 PM", title: "Kids Jiu Jitsu", minutes: 60 }
+    - { day: Wed, start: "6:00 PM", title: "Wrestling & No Gi Judo", minutes: ~, mismatch: "source lists Wed 6:00-7:00 PM Yoga, no Wrestling & No Gi Judo" }
+    - { day: Wed, start: "7:00 PM", title: "Gi Jiu Jitsu", minutes: 60 }
+    - { day: Thu, start: "6:00 PM", title: "Women's Jiu Jitsu", minutes: 60 }
+    - { day: Thu, start: "7:00 PM", title: "Kids Jiu Jitsu", minutes: 60 }
+    - { day: Thu, start: "7:00 PM", title: "No Gi Jiu Jitsu", minutes: 60 }
+    - { day: Fri, start: "7:00 PM", title: "Gi Jiu Jitsu", minutes: 60 }
+
+"Westside Jiu Jitsu Academy - Westland":
+  source: "https://westsidejja.com/schedule/"
+  source_date: "live 2026-11-10"
+  checked: "2026-11-10"
+  classes:
+    - { day: Sun, start: "5:00 PM", title: "Kickboxing", minutes: 60 }
+    - { day: Mon, start: "6:00 AM", title: "No Gi Jiu Jitsu", minutes: 60 }
+    - { day: Mon, start: "12:00 PM", title: "Gi Jiu Jitsu", minutes: 60 }
+    - { day: Mon, start: "5:00 PM", title: "Kids Jiu Jitsu", minutes: 60 }
+    - { day: Mon, start: "6:00 PM", title: "Women's Jiu Jitsu", minutes: 60 }
+    - { day: Mon, start: "7:00 PM", title: "No Gi Jiu Jitsu", minutes: 60 }
+    - { day: Tue, start: "6:00 AM", title: "Gi Jiu Jitsu", minutes: 60 }
+    - { day: Tue, start: "4:30 PM", title: "Littles Jiu Jitsu", minutes: 40 }
+    - { day: Tue, start: "5:00 PM", title: "Kids Jiu Jitsu", minutes: 60 }
+    - { day: Tue, start: "6:00 PM", title: "Wrestling", minutes: 60 }
+    - { day: Tue, start: "7:00 PM", title: "Gi Jiu Jitsu", minutes: 60 }
+    - { day: Wed, start: "6:00 AM", title: "No Gi Jiu Jitsu", minutes: 60 }
+    - { day: Wed, start: "12:00 PM", title: "No Gi Jiu Jitsu", minutes: 60 }
+    - { day: Wed, start: "5:00 PM", title: "Kids Jiu Jitsu", minutes: 60 }
+    - { day: Wed, start: "6:00 PM", title: "Women's Jiu Jitsu", minutes: 60 }
+    - { day: Wed, start: "7:00 PM", title: "No Gi Jiu Jitsu", minutes: 60 }
+    - { day: Thu, start: "6:00 AM", title: "Gi Jiu Jitsu", minutes: 60 }
+    - { day: Thu, start: "4:30 PM", title: "Littles Jiu Jitsu", minutes: 40 }
+    - { day: Thu, start: "5:00 PM", title: "Kids Jiu Jitsu", minutes: 60 }
+    - { day: Thu, start: "6:00 PM", title: "Judo", minutes: 60 }
+    - { day: Thu, start: "7:00 PM", title: "Gi Jiu Jitsu", minutes: 60 }
+    - { day: Fri, start: "5:30 AM", title: "No Gi Jiu Jitsu", minutes: 90 }
+    - { day: Fri, start: "12:00 PM", title: "Fundamentals Class", minutes: 60 }
+    - { day: Fri, start: "5:00 PM", title: "Kids Jiu Jitsu", minutes: 60 }
+    - { day: Fri, start: "6:00 PM", title: "Women's Jiu Jitsu", minutes: 60 }
+    - { day: Fri, start: "7:00 PM", title: "No Gi Jiu Jitsu", minutes: 60 }
+    - { day: Sat, start: "10:00 AM", title: "Judo", minutes: 60 }
+    - { day: Sat, start: "11:00 AM", title: "Fundamentals Class", minutes: 90 }
+    - { day: Sat, start: "1:00 PM", title: "Kids Jiu Jitsu", minutes: 60 }

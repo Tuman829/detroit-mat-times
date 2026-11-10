@@ -68,9 +68,14 @@
     <div id="map" class="map" hidden></div>
     <section id="gyms" class="gyms">
       <h2>Gyms</h2>
-      <div class="gym-grid">
-        <% directory.each do |gym| %><%= render("gym", gym: gym) %><% end %>
-      </div>
+      <% gym_sections.each do |section, gyms| %>
+        <details class="gym-section" data-section="<%= section %>" open>
+          <summary><%= SECTIONS.fetch(section) %> <span class="count"><%= gyms.size %></span></summary>
+          <div class="gym-grid">
+            <% gyms.each do |gym| %><%= render("gym", gym: gym) %><% end %>
+          </div>
+        </details>
+      <% end %>
     </section>
     <footer class="site-footer">
       <p>Schedules change. Check with the gym before you drive over.</p>

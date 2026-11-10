@@ -138,6 +138,7 @@ function boot() {
     el.style.setProperty("--region-2", colors[slugs.at(-1)]);
   }
   for (const entry of entries) paint(entry.el, entry.facets.region);
+  const gymSections = [...document.querySelectorAll(".gym-section")];
   const gymCards = [...document.querySelectorAll("#gyms .gym")].map((el) => ({ el, regions: el.dataset.region.split(" ") }));
   for (const gym of gymCards) paint(gym.el, gym.regions);
 
@@ -187,6 +188,11 @@ function boot() {
     }
     schedule.style.setProperty("--cols", Math.max(column - 2, 1));
     for (const gym of gymCards) gym.el.hidden = state.filters.region.size > 0 && !gym.regions.some((slug) => state.filters.region.has(slug));
+    for (const section of gymSections) {
+      const shown = section.querySelectorAll(".gym:not([hidden])").length;
+      section.hidden = !shown;
+      section.querySelector(".count").textContent = shown;
+    }
 
     const query = toQuery(state);
     schedule.dataset.view = state.view;
@@ -292,6 +298,7 @@ function boot() {
   });
   form.addEventListener("submit", (event) => event.preventDefault());
   window.addEventListener("beforeprint", () => {
+    for (const section of gymSections) section.open = true;
     root.dataset.print ||= state.view === "map" ? "list" : state.view;
     schedule.dataset.view = root.dataset.print === "gyms" ? state.view : root.dataset.print;
   });

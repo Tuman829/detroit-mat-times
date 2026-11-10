@@ -10,6 +10,10 @@ module MatTimes
     COORDINATES = File.join(ROOT, "data/gym_coordinates.yml")
     REGIONS = File.join(ROOT, "data/regions.yml")
     REGION_BORDERS = File.join(ROOT, "data/region_borders.yml")
+    GYM_SECTIONS = File.join(ROOT, "data/gym_sections.yml")
+
+    SECTIONS = { "bjj" => "BJJ / MMA", "judo" => "Judo", "other" => "Other", "wrestling" => "Wrestling" }.freeze
+    SECTION_OF_DISCIPLINE = { "bjj" => "bjj", "striking" => "bjj", "judo" => "judo", "sambo" => "judo", "wrestling" => "wrestling", "other" => "other" }.freeze
 
     LABELS = {
       "when" => { "morning" => "Morning", "afternoon" => "Afternoon", "evening" => "Evening" },
@@ -37,17 +41,19 @@ module MatTimes
         config: config,
         pulled_on: Date.iso8601(File.read(File.join(data, "sheet/pulled_on.txt")).strip),
         regions: Regions.load(REGIONS, borders: REGION_BORDERS),
-        coordinates: GymLocator.load(COORDINATES)
+        coordinates: GymLocator.load(COORDINATES),
+        sections: YAML.load_file(GYM_SECTIONS)
       )
     end
 
-    def initialize(timetable:, directory:, config:, pulled_on:, regions:, coordinates: {})
+    def initialize(timetable:, directory:, config:, pulled_on:, regions:, coordinates: {}, sections: {})
       @timetable = timetable
       @directory = directory
       @config = config
       @pulled_on = pulled_on
       @regions = regions
       @coordinates = coordinates
+      @sections = sections
       @templates = {}
     end
 
@@ -160,6 +166,23 @@ module MatTimes
     end
 
     def json(data) = JSON.generate(data).gsub("</", "<\\/")
+
+    def gym_sections = directory.group_by { |gym| section_of(gym) }.sort_by { |section, _| SECTIONS.keys.index(section) }
+
+    def section_of(gym)
+      @sections.fetch(gym.name) do
+        tally = section_tally[gym.slug]
+        next tally.max_by { |section, count| [count, -SECTIONS.keys.index(section)] }.first if tally
+
+        { /wrestl/i => "wrestling", /judo/i => "judo" }.find { |pattern, _| gym.name.match?(pattern) }&.last || "bjj"
+      end
+    end
+
+    def section_tally
+      @section_tally ||= timetable.classes.group_by { |entry| entry.gym.slug }.transform_values do |entries|
+        entries.flat_map { |entry| entry.disciplines.map { |discipline| SECTION_OF_DISCIPLINE.fetch(discipline) } }.tally
+      end
+    end
 
     def class_count(gym) = class_counts.fetch(gym.slug, 0)
 

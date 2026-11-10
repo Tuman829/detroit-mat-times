@@ -37,6 +37,27 @@ class SiteBuilderTest < Minitest::Test
     assert_includes html, 'name="region" value="oakland-county"'
   end
 
+  def sections_in(page)
+    page.scan(%r{<details class="gym-section" data-section="(\w+)" open>(.*?)</details>}m).to_h { |section, body| [section, body.scan(/id="gym-([\w-]+)"/).flatten] }
+  end
+
+  def test_gyms_sit_in_the_section_most_of_their_classes_are_in
+    assert_equal({ "bjj" => %w[other-club-of-michigan quiet-gym], "wrestling" => %w[test-gym] }, sections_in(html))
+  end
+
+  def test_a_listed_gym_goes_to_its_listed_section
+    page = MatTimes::SiteBuilder.new(
+      timetable: timetable, directory: directory, config: CONFIG, pulled_on: Date.new(2026, 11, 9), regions: regions, sections: { "Test Gym" => "judo" }
+    ).html
+
+    assert_equal %w[test-gym], sections_in(page)["judo"]
+  end
+
+  def test_sections_are_collapsible_and_named
+    assert_includes html, "<summary>BJJ / MMA"
+    assert_includes html, "<summary>Wrestling"
+  end
+
   def test_map_is_a_layout_choice
     assert_includes html, 'name="view" value="map"'
     assert_includes html, '<div id="map" class="map" hidden></div>'

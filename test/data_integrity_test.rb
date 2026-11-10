@@ -42,6 +42,24 @@ class DataIntegrityTest < Minitest::Test
     TIMETABLE.gyms.each { |gym| assert regions.for(gym.city), gym.name }
   end
 
+  def test_class_lengths_describe_real_classes
+    classes = TIMETABLE.classes.to_set { |klass| [klass.gym.name, klass.day[0, 3], MatTimes::Clock.format(klass.starts_at), klass.title] }
+
+    YAML.load_file(File.join(MatTimes::ROOT, "data/class_lengths.yml")).each do |gym, record|
+      record.fetch("classes").each do |klass|
+        assert classes.include?([gym, klass["day"], klass["start"], klass["title"]]), "No class in the sheet matches #{gym}: #{klass}"
+        assert klass["minutes"].nil? || (1..300).cover?(klass["minutes"]), "#{gym} #{klass}"
+      end
+    end
+  end
+
+  def test_hand_placed_gyms_are_real_and_go_to_a_real_section
+    YAML.load_file(MatTimes::SiteBuilder::GYM_SECTIONS).each do |name, section|
+      assert DIRECTORY.find { |gym| gym.name == name }, name
+      assert_includes MatTimes::SiteBuilder::SECTIONS.keys, section
+    end
+  end
+
   def test_border_gyms_are_real_gyms
     names = TIMETABLE.gyms.map(&:name)
 

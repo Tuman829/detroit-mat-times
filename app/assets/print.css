@@ -27,6 +27,7 @@
   html[data-print="gyms"] #schedule { display: none !important; }
   html[data-print="gyms"] .gyms { margin: 0; border: 0; }
   html[data-print="gyms"] .gym-grid { grid-template-columns: 1fr 1fr; }
+  .gym-section > summary { padding: 6px 0 2px; background: none; border-bottom: 1px solid #000; list-style: none; }
 
   #schedule[data-view="week"] {
     page: week;
